@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
@@ -7,160 +8,274 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Jebon Kumar Sarker - Mechanical Engineer, Chinese Interpreter, Business Development and Operations Professional.">
-
-    <meta name="keywords"
-          content="Jebon Kumar Sarker, Mechanical Engineer, Chinese Interpreter, Business Development, Bangladesh, China, Manufacturing">
+          content="Jebon Kumar Sarker - Mechanical Engineer, Chinese-Bangla-English Communication, Business Development and Operations Professional.">
 
     <meta name="author"
           content="Jebon Kumar Sarker">
 
     <title>Jebon Kumar Sarker | Mechanical Engineer & Business Professional</title>
 
-    <link rel="stylesheet"
-          href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap"
           rel="stylesheet">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     HEADER / NAVIGATION
+===================================================== -->
 
-<header class="header">
+<header class="header" id="header">
 
-    <nav class="navbar container">
+    <nav class="navbar">
 
         <a href="#home" class="logo">
             Jebon<span>.</span>
         </a>
 
-        <button class="menu-toggle" id="menuToggle">
-            <i class="fas fa-bars"></i>
-        </button>
+
+        <div class="nav-right">
+
+            <!-- Language -->
+            <div class="language-selector">
+
+                <button class="language-btn" id="languageBtn">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLanguage">EN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+
+                <div class="language-menu" id="languageMenu">
+
+                    <button data-lang="en">
+                        🇬🇧 English
+                    </button>
+
+                    <button data-lang="zh">
+                        🇨🇳 中文
+                    </button>
+
+                    <button data-lang="bn">
+                        🇧🇩 বাংলা
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Theme -->
+            <button class="theme-toggle"
+                    id="themeToggle"
+                    aria-label="Toggle dark and light mode">
+
+                <i class="fas fa-moon"></i>
+
+            </button>
+
+
+            <!-- Mobile Menu -->
+            <button class="menu-toggle"
+                    id="menuToggle"
+                    aria-label="Open menu">
+
+                <i class="fas fa-bars"></i>
+
+            </button>
+
+        </div>
+
 
         <ul class="nav-menu" id="navMenu">
 
             <li>
-                <a href="#home">Home</a>
+                <a href="#home" data-i18n="nav_home">
+                    Home
+                </a>
             </li>
 
             <li>
-                <a href="#about">About</a>
+                <a href="#about" data-i18n="nav_about">
+                    About
+                </a>
             </li>
 
             <li>
-                <a href="#experience">Experience</a>
+                <a href="#experience" data-i18n="nav_experience">
+                    Experience
+                </a>
             </li>
 
             <li>
-                <a href="#skills">Skills</a>
+                <a href="#skills" data-i18n="nav_skills">
+                    Skills
+                </a>
             </li>
 
             <li>
-                <a href="#projects">Projects</a>
+                <a href="#projects" data-i18n="nav_projects">
+                    Projects
+                </a>
             </li>
 
             <li>
-                <a href="#education">Education</a>
-            </li>
-
-            <li>
-                <a href="#contact">Contact</a>
+                <a href="#contact" data-i18n="nav_contact">
+                    Contact
+                </a>
             </li>
 
         </ul>
-
-        <button id="themeToggle" class="theme-toggle">
-            <i class="fas fa-moon"></i>
-        </button>
 
     </nav>
 
 </header>
 
 
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
 <main>
 
-<!-- ================= HERO ================= -->
 
-<section id="home" class="hero">
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-    <div class="hero-background"></div>
+<section class="hero" id="home">
 
-    <div class="container hero-content">
+    <div class="hero-bg"></div>
+
+    <div class="container hero-container">
+
+
+        <!-- HERO TEXT -->
 
         <div class="hero-text">
 
-            <p class="eyebrow">
-                MECHANICAL ENGINEER • BUSINESS • CHINESE COMMUNICATION
+            <p class="eyebrow"
+               data-i18n="hero_eyebrow">
+
+                MECHANICAL ENGINEER • BUSINESS • COMMUNICATION
+
             </p>
+
 
             <h1>
-                Jebon Kumar
-                <span>Sarker</span>
+
+                <span data-i18n="hero_first_name">
+                    Jebon Kumar
+                </span>
+
+                <span class="hero-name"
+                      data-i18n="hero_last_name">
+
+                    Sarker
+
+                </span>
+
             </h1>
 
-            <h2>
-                Mechanical Engineer & Business Operations Professional
+
+            <h2 data-i18n="hero_title">
+
+                Mechanical Engineer &
+                Business Operations Professional
+
             </h2>
 
-            <p class="hero-description">
-                Mechanical Engineering graduate with professional experience
-                in Chinese-Bangla-English communication, business development,
-                sales, manufacturing operations and management coordination.
+
+            <p class="hero-description"
+               data-i18n="hero_description">
+
+                Mechanical Engineering graduate with professional
+                experience in Chinese-Bangla-English communication,
+                business development, sales, manufacturing operations,
+                administration and management coordination.
+
             </p>
+
 
             <div class="hero-buttons">
 
-                <a href="#contact" class="btn btn-primary">
-                    Contact Me
+                <a href="mailto:jibontalk2020@gmail.com"
+                   class="btn btn-primary">
+
+                    <span data-i18n="contact_me">
+                        Contact Me
+                    </span>
+
+                    <i class="fas fa-arrow-right"></i>
+
                 </a>
 
-                <a href="assets/cv.pdf"
-                   class="btn btn-secondary"
-                   target="_blank">
-                    <i class="fas fa-download"></i>
-                    Download CV
+
+                <a href="#experience"
+                   class="btn btn-outline">
+
+                    <span data-i18n="view_experience">
+                        View Experience
+                    </span>
+
                 </a>
 
             </div>
 
+
+            <!-- SOCIAL -->
+
             <div class="social-links">
 
-                <a href="https://www.linkedin.com/"
+                <a href="https://www.linkedin.com/in/jebon-kumar-sarker-667204406/"
                    target="_blank"
+                   rel="noopener noreferrer"
                    aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
+
+                    <i class="fab fa-linkedin-in"></i>
+
                 </a>
 
-                <a href="https://github.com/jebonkumar2027"
-                   target="_blank"
-                   aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
 
-                <a href="https://www.youtube.com/"
+                <a href="https://web.facebook.com/JebonKumar2021/"
                    target="_blank"
-                   aria-label="YouTube">
-                    <i class="fab fa-youtube"></i>
-                </a>
-
-                <a href="https://www.facebook.com/"
-                   target="_blank"
+                   rel="noopener noreferrer"
                    aria-label="Facebook">
-                    <i class="fab fa-facebook"></i>
+
+                    <i class="fab fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="https://www.instagram.com/jebonkumarsarker/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Instagram">
+
+                    <i class="fab fa-instagram"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/@jebonkumarsarker564"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="YouTube">
+
+                    <i class="fab fa-youtube"></i>
+
                 </a>
 
             </div>
@@ -168,26 +283,57 @@
         </div>
 
 
-        <div class="hero-image">
 
-            <div class="profile-frame">
+        <!-- HERO IMAGE -->
+
+        <div class="hero-visual">
+
+            <div class="profile-wrapper">
+
+                <!-- IMPORTANT:
+                     Keep profile.jpg inside /assets/
+                -->
 
                 <img src="assets/profile.jpg"
-                     alt="Jebon Kumar Sarker">
+                     alt="Jebon Kumar Sarker"
+                     class="profile-image"
+                     onerror="this.style.display='none'; document.getElementById('imageFallback').style.display='flex';">
+
+
+                <!-- Fallback if image cannot be found -->
+
+                <div class="image-fallback"
+                     id="imageFallback">
+
+                    <i class="fas fa-user"></i>
+
+                    <span>
+                        Jebon Kumar Sarker
+                    </span>
+
+                </div>
 
             </div>
 
-            <div class="floating-card card-one">
 
-                <strong>Mechanical</strong>
-                <span>Engineering</span>
+            <div class="experience-badge">
+
+                <strong>2025+</strong>
+
+                <span data-i18n="professional_experience">
+                    Professional Experience
+                </span>
 
             </div>
 
-            <div class="floating-card card-two">
 
-                <strong>Chinese</strong>
-                <span>Communication</span>
+            <div class="language-badge">
+
+                <strong>中 · বাংলা · EN</strong>
+
+                <span data-i18n="multilingual">
+                    Multilingual Communication
+                </span>
 
             </div>
 
@@ -198,71 +344,144 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
 
-<section id="about" class="section">
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section" id="about">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-header">
 
-            <p class="section-label">
+            <p class="section-label"
+               data-i18n="about_label">
+
                 ABOUT ME
+
             </p>
 
-            <h2>
-                Engineering knowledge meets business execution.
+            <h2 data-i18n="about_title">
+
+                Engineering knowledge meets
+                business execution.
+
             </h2>
+
+            <p data-i18n="about_intro">
+
+                I combine technical engineering knowledge with
+                communication, business development and operational
+                experience.
+
+            </p>
 
         </div>
 
 
         <div class="about-grid">
 
-            <div class="about-text">
 
-                <p>
+            <div class="about-content">
+
+                <p data-i18n="about_p1">
+
                     I am a Mechanical Engineering graduate from
                     Changsha University of Science & Technology,
-                    China, with professional experience working
-                    in multinational business environments in Bangladesh.
+                    China, with professional experience in
+                    multinational business environments in Bangladesh.
+
                 </p>
 
-                <p>
-                    My professional work combines technical knowledge,
-                    Chinese-Bangla-English communication, business
-                    development, sales coordination, manufacturing
-                    operations and administrative management.
+
+                <p data-i18n="about_p2">
+
+                    My professional work combines mechanical engineering
+                    knowledge, Chinese-Bangla-English communication,
+                    business development, sales coordination,
+                    manufacturing operations and management support.
+
                 </p>
 
-                <p>
-                    I currently work closely with company management,
-                    production teams, sales representatives, suppliers
-                    and clients, helping coordinate communication and
-                    business operations between Chinese management and
-                    local teams.
+
+                <p data-i18n="about_p3">
+
+                    I work closely with management, production teams,
+                    sales representatives, suppliers and clients,
+                    helping coordinate communication and business
+                    operations between Chinese management and local teams.
+
                 </p>
 
-                <div class="about-stats">
 
-                    <div>
-                        <strong>Mechanical</strong>
-                        <span>Engineering</span>
+                <div class="about-highlights">
+
+                    <div class="highlight">
+
+                        <i class="fas fa-gears"></i>
+
+                        <div>
+                            <strong data-i18n="highlight_engineering">
+                                Engineering
+                            </strong>
+
+                            <span data-i18n="highlight_engineering_text">
+                                Mechanical Design & Manufacturing
+                            </span>
+                        </div>
+
                     </div>
 
-                    <div>
-                        <strong>Chinese</strong>
-                        <span>Communication</span>
+
+                    <div class="highlight">
+
+                        <i class="fas fa-language"></i>
+
+                        <div>
+                            <strong data-i18n="highlight_language">
+                                Communication
+                            </strong>
+
+                            <span data-i18n="highlight_language_text">
+                                Chinese • Bangla • English
+                            </span>
+                        </div>
+
                     </div>
 
-                    <div>
-                        <strong>Business</strong>
-                        <span>Development</span>
+
+                    <div class="highlight">
+
+                        <i class="fas fa-chart-line"></i>
+
+                        <div>
+                            <strong data-i18n="highlight_business">
+                                Business
+                            </strong>
+
+                            <span data-i18n="highlight_business_text">
+                                Sales & Business Development
+                            </span>
+                        </div>
+
                     </div>
 
-                    <div>
-                        <strong>Operations</strong>
-                        <span>Management</span>
+
+                    <div class="highlight">
+
+                        <i class="fas fa-industry"></i>
+
+                        <div>
+                            <strong data-i18n="highlight_operations">
+                                Operations
+                            </strong>
+
+                            <span data-i18n="highlight_operations_text">
+                                Manufacturing & Management Support
+                            </span>
+                        </div>
+
                     </div>
 
                 </div>
@@ -272,43 +491,49 @@
 
             <div class="about-card">
 
-                <h3>Professional Focus</h3>
+                <div class="about-card-top">
+
+                    <span>
+                        01
+                    </span>
+
+                    <i class="fas fa-arrow-up-right-from-square"></i>
+
+                </div>
+
+                <h3 data-i18n="about_card_title">
+                    Professional Focus
+                </h3>
+
 
                 <ul>
 
-                    <li>
-                        <i class="fas fa-check"></i>
-                        Manufacturing & Production
-                    </li>
-
-                    <li>
-                        <i class="fas fa-check"></i>
+                    <li data-i18n="focus_1">
                         Mechanical Engineering
                     </li>
 
-                    <li>
-                        <i class="fas fa-check"></i>
+                    <li data-i18n="focus_2">
+                        Manufacturing & Production
+                    </li>
+
+                    <li data-i18n="focus_3">
                         Chinese Business Communication
                     </li>
 
-                    <li>
-                        <i class="fas fa-check"></i>
+                    <li data-i18n="focus_4">
                         Business Development
                     </li>
 
-                    <li>
-                        <i class="fas fa-check"></i>
+                    <li data-i18n="focus_5">
                         Sales & Client Management
                     </li>
 
-                    <li>
-                        <i class="fas fa-check"></i>
+                    <li data-i18n="focus_6">
                         Administration & Operations
                     </li>
 
-                    <li>
-                        <i class="fas fa-check"></i>
-                        Digital & Web Projects
+                    <li data-i18n="focus_7">
+                        Web & Digital Projects
                     </li>
 
                 </ul>
@@ -322,21 +547,34 @@
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
 
-<section id="experience" class="section section-dark">
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section class="section dark-section" id="experience">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-header">
 
-            <p class="section-label">
+            <p class="section-label"
+               data-i18n="experience_label">
+
                 EXPERIENCE
+
             </p>
 
-            <h2>
+            <h2 data-i18n="experience_title">
                 Professional Journey
             </h2>
+
+            <p data-i18n="experience_intro">
+
+                Experience across engineering, manufacturing,
+                business development, communication and management.
+
+            </p>
 
         </div>
 
@@ -344,64 +582,66 @@
         <div class="timeline">
 
 
-            <!-- CURRENT -->
+            <!-- CURRENT ROLE -->
 
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
-                <div class="timeline-content">
+                <div class="timeline-card">
 
-                    <span class="timeline-date">
+                    <span class="timeline-date"
+                          data-i18n="exp1_date">
+
                         2026 — Present
+
                     </span>
 
-                    <h3>
+
+                    <h3 data-i18n="exp1_title">
                         Assistant to Managing Director
                     </h3>
 
+
                     <h4>
-                        Sinotech Building Material Co., Ltd. — Bangladesh
+                        Sinotech Building Material Co., Ltd.
                     </h4>
 
-                    <p>
+
+                    <p data-i18n="exp1_description">
+
                         Supporting Chinese management in communication,
-                        production coordination, sales development,
+                        production coordination, business development,
                         supplier communication, client management,
-                        administrative work and day-to-day business operations.
+                        administration and daily business operations.
+
                     </p>
 
-                    <ul>
 
-                        <li>
-                            Chinese-Bangla-English communication
-                        </li>
+                    <div class="tags">
 
-                        <li>
-                            Production and factory coordination
-                        </li>
+                        <span data-i18n="tag_management">
+                            Management Support
+                        </span>
 
-                        <li>
-                            Business development and client follow-up
-                        </li>
+                        <span data-i18n="tag_translation">
+                            Interpretation
+                        </span>
 
-                        <li>
-                            Sales team coordination
-                        </li>
+                        <span data-i18n="tag_sales">
+                            Sales
+                        </span>
 
-                        <li>
-                            Supplier and purchasing coordination
-                        </li>
+                        <span data-i18n="tag_production">
+                            Production
+                        </span>
 
-                        <li>
-                            Management reporting and documentation
-                        </li>
-
-                    </ul>
+                    </div>
 
                 </div>
 
             </div>
+
 
 
             <!-- NIHAO -->
@@ -410,60 +650,110 @@
 
                 <div class="timeline-dot"></div>
 
-                <div class="timeline-content">
+                <div class="timeline-card">
 
                     <span class="timeline-date">
                         2025 — 2026
                     </span>
 
-                    <h3>
-                        Interpreter / HR & Administration / Marketing
+
+                    <h3 data-i18n="exp2_title">
+
+                        Interpreter / HR & Administration /
+                        Marketing
+
                     </h3>
 
+
                     <h4>
-                        Nihao Food Co. Ltd. — Bangladesh
+                        Nihao Food Co. Ltd.
                     </h4>
 
-                    <p>
-                        Worked across interpretation, administration,
-                        employee communication and marketing activities
-                        in a Chinese-Bangladeshi business environment.
+
+                    <p data-i18n="exp2_description">
+
+                        Worked across interpretation, employee
+                        communication, administration, HR support
+                        and marketing activities in a
+                        Chinese-Bangladeshi business environment.
+
                     </p>
+
+
+                    <div class="tags">
+
+                        <span>
+                            HR
+                        </span>
+
+                        <span>
+                            Marketing
+                        </span>
+
+                        <span>
+                            Communication
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- INTERNSHIP -->
+
+            <!-- AUTOMATION -->
 
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
-                <div class="timeline-content">
+                <div class="timeline-card">
 
                     <span class="timeline-date">
                         2025
                     </span>
 
-                    <h3>
-                        Automation Internship
+
+                    <h3 data-i18n="exp3_title">
+                        Industrial Automation Internship
                     </h3>
+
 
                     <h4>
                         Chen Gengbiao Automation
                     </h4>
 
-                    <p>
-                        Practical exposure to industrial automation,
-                        PLC concepts, FluidSIM simulation and
-                        motor control logic.
+
+                    <p data-i18n="exp3_description">
+
+                        Practical exposure to PLC concepts,
+                        FluidSIM simulation, motor control logic
+                        and industrial automation systems.
+
                     </p>
+
+
+                    <div class="tags">
+
+                        <span>
+                            PLC
+                        </span>
+
+                        <span>
+                            FluidSIM
+                        </span>
+
+                        <span>
+                            Automation
+                        </span>
+
+                    </div>
 
                 </div>
 
             </div>
+
 
 
             <!-- UNIVERSITY -->
@@ -472,24 +762,30 @@
 
                 <div class="timeline-dot"></div>
 
-                <div class="timeline-content">
+                <div class="timeline-card">
 
                     <span class="timeline-date">
                         2021 — 2025
                     </span>
 
-                    <h3>
+
+                    <h3 data-i18n="exp4_title">
                         Mechanical Engineering
                     </h3>
 
+
                     <h4>
-                        Changsha University of Science & Technology, China
+                        Changsha University of Science &
+                        Technology, China
                     </h4>
 
-                    <p>
-                        Bachelor's degree with academic and practical
-                        exposure to mechanical design, manufacturing,
-                        automation and engineering systems.
+
+                    <p data-i18n="exp4_description">
+
+                        Studied mechanical engineering with
+                        practical exposure to mechanical design,
+                        manufacturing, automation and engineering systems.
+
                     </p>
 
                 </div>
@@ -503,20 +799,26 @@
 </section>
 
 
-<!-- ================= SKILLS ================= -->
 
-<section id="skills" class="section">
+<!-- =====================================================
+     SKILLS
+===================================================== -->
+
+<section class="section" id="skills">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-header">
 
-            <p class="section-label">
+            <p class="section-label"
+               data-i18n="skills_label">
+
                 SKILLS
+
             </p>
 
-            <h2>
-                What I Work With
+            <h2 data-i18n="skills_title">
+                Professional Capabilities
             </h2>
 
         </div>
@@ -527,132 +829,137 @@
 
             <div class="skill-card">
 
-                <div class="skill-icon">
-                    <i class="fas fa-gears"></i>
+                <div class="skill-number">
+                    01
                 </div>
 
-                <h3>
+                <i class="fas fa-gears skill-icon"></i>
+
+                <h3 data-i18n="skill1_title">
                     Mechanical Engineering
                 </h3>
 
-                <p>
+                <p data-i18n="skill1_text">
+
                     Mechanical design, manufacturing,
                     automation and engineering fundamentals.
-                </p>
 
-                <div class="skill-bar">
-                    <span style="width:85%"></span>
-                </div>
+                </p>
 
             </div>
 
 
+
             <div class="skill-card">
 
-                <div class="skill-icon">
-                    <i class="fas fa-language"></i>
+                <div class="skill-number">
+                    02
                 </div>
 
-                <h3>
+                <i class="fas fa-language skill-icon"></i>
+
+                <h3 data-i18n="skill2_title">
                     Chinese Communication
                 </h3>
 
-                <p>
+                <p data-i18n="skill2_text">
+
                     Chinese-Bangla-English interpretation,
                     business communication and coordination.
-                </p>
 
-                <div class="skill-bar">
-                    <span style="width:90%"></span>
-                </div>
+                </p>
 
             </div>
 
 
+
             <div class="skill-card">
 
-                <div class="skill-icon">
-                    <i class="fas fa-chart-line"></i>
+                <div class="skill-number">
+                    03
                 </div>
 
-                <h3>
+                <i class="fas fa-chart-line skill-icon"></i>
+
+                <h3 data-i18n="skill3_title">
                     Business Development
                 </h3>
 
-                <p>
+                <p data-i18n="skill3_text">
+
                     Lead generation, client communication,
                     sales follow-up and business relationships.
-                </p>
 
-                <div class="skill-bar">
-                    <span style="width:85%"></span>
-                </div>
+                </p>
 
             </div>
 
 
+
             <div class="skill-card">
 
-                <div class="skill-icon">
-                    <i class="fas fa-industry"></i>
+                <div class="skill-number">
+                    04
                 </div>
 
-                <h3>
-                    Manufacturing
+                <i class="fas fa-industry skill-icon"></i>
+
+                <h3 data-i18n="skill4_title">
+                    Manufacturing Operations
                 </h3>
 
-                <p>
+                <p data-i18n="skill4_text">
+
                     Production reporting, factory coordination,
-                    quality and operational follow-up.
-                </p>
+                    inventory and operational follow-up.
 
-                <div class="skill-bar">
-                    <span style="width:82%"></span>
-                </div>
+                </p>
 
             </div>
 
 
-            <div class="skill-card">
-
-                <div class="skill-icon">
-                    <i class="fas fa-laptop-code"></i>
-                </div>
-
-                <h3>
-                    Web Development
-                </h3>
-
-                <p>
-                    HTML, CSS, JavaScript and personal/business
-                    website development.
-                </p>
-
-                <div class="skill-bar">
-                    <span style="width:70%"></span>
-                </div>
-
-            </div>
-
 
             <div class="skill-card">
 
-                <div class="skill-icon">
-                    <i class="fas fa-users"></i>
+                <div class="skill-number">
+                    05
                 </div>
 
-                <h3>
+                <i class="fas fa-users skill-icon"></i>
+
+                <h3 data-i18n="skill5_title">
                     Management Support
                 </h3>
 
-                <p>
-                    Documentation, coordination, reporting,
+                <p data-i18n="skill5_text">
+
+                    Documentation, reporting, coordination,
                     communication and administrative support.
+
                 </p>
 
-                <div class="skill-bar">
-                    <span style="width:88%"></span>
+            </div>
+
+
+
+            <div class="skill-card">
+
+                <div class="skill-number">
+                    06
                 </div>
+
+                <i class="fas fa-code skill-icon"></i>
+
+                <h3 data-i18n="skill6_title">
+                    Web & Digital
+                </h3>
+
+                <p data-i18n="skill6_text">
+
+                    HTML, CSS, JavaScript, websites,
+                    digital content and online business presence.
+
+                </p>
 
             </div>
 
@@ -663,21 +970,34 @@
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
 
-<section id="projects" class="section section-dark">
+<!-- =====================================================
+     PROJECTS
+===================================================== -->
+
+<section class="section dark-section" id="projects">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-header">
 
-            <p class="section-label">
+            <p class="section-label"
+               data-i18n="projects_label">
+
                 PROJECTS
+
             </p>
 
-            <h2>
-                Selected Work
+            <h2 data-i18n="projects_title">
+                Selected Professional Work
             </h2>
+
+            <p data-i18n="projects_intro">
+
+                A selection of engineering, manufacturing,
+                business and digital work.
+
+            </p>
 
         </div>
 
@@ -685,101 +1005,166 @@
         <div class="projects-grid">
 
 
+            <!-- PROJECT 1 -->
+
             <article class="project-card">
 
                 <div class="project-image">
 
                     <img src="assets/projects/project-1.jpg"
-                         alt="Manufacturing project">
+                         alt="Mechanical Engineering Project"
+                         onerror="this.parentElement.classList.add('no-image');">
+
+                    <div class="project-image-fallback">
+                        <i class="fas fa-gears"></i>
+                    </div>
 
                 </div>
 
+
                 <div class="project-content">
 
-                    <span>
-                        Engineering
+                    <span class="project-category"
+                          data-i18n="project1_category">
+
+                        ENGINEERING
+
                     </span>
 
-                    <h3>
+
+                    <h3 data-i18n="project1_title">
+
                         Mechanical Engineering Thesis
+
                     </h3>
 
-                    <p>
+
+                    <p data-i18n="project1_text">
+
                         Machining and fixture design work related
                         to a vane pump component.
+
                     </p>
 
-                    <a href="#contact">
-                        View Project
+
+                    <a href="mailto:jibontalk2020@gmail.com?subject=Mechanical%20Engineering%20Project"
+                       data-i18n="project_details">
+
+                        Discuss Project
                         <i class="fas fa-arrow-right"></i>
+
                     </a>
 
                 </div>
 
             </article>
 
+
+
+            <!-- PROJECT 2 -->
 
             <article class="project-card">
 
                 <div class="project-image">
 
                     <img src="assets/projects/project-2.jpg"
-                         alt="Manufacturing operations">
+                         alt="Manufacturing Operations"
+                         onerror="this.parentElement.classList.add('no-image');">
+
+                    <div class="project-image-fallback">
+                        <i class="fas fa-industry"></i>
+                    </div>
 
                 </div>
 
+
                 <div class="project-content">
 
-                    <span>
-                        Manufacturing
+                    <span class="project-category"
+                          data-i18n="project2_category">
+
+                        MANUFACTURING
+
                     </span>
 
-                    <h3>
+
+                    <h3 data-i18n="project2_title">
+
                         Building Material Production
+
                     </h3>
 
-                    <p>
+
+                    <p data-i18n="project2_text">
+
                         Production coordination, reporting,
                         packaging, inventory and operational follow-up.
+
                     </p>
 
-                    <a href="#contact">
-                        View Project
+
+                    <a href="mailto:jibontalk2020@gmail.com?subject=Manufacturing%20Project"
+                       data-i18n="project_details">
+
+                        Discuss Project
                         <i class="fas fa-arrow-right"></i>
+
                     </a>
 
                 </div>
 
             </article>
 
+
+
+            <!-- PROJECT 3 -->
 
             <article class="project-card">
 
                 <div class="project-image">
 
                     <img src="assets/projects/project-3.jpg"
-                         alt="Business development">
+                         alt="Business Development"
+                         onerror="this.parentElement.classList.add('no-image');">
+
+                    <div class="project-image-fallback">
+                        <i class="fas fa-handshake"></i>
+                    </div>
 
                 </div>
 
+
                 <div class="project-content">
 
-                    <span>
-                        Business
+                    <span class="project-category"
+                          data-i18n="project3_category">
+
+                        BUSINESS
+
                     </span>
 
-                    <h3>
+
+                    <h3 data-i18n="project3_title">
+
                         Business Development
+
                     </h3>
 
-                    <p>
+
+                    <p data-i18n="project3_text">
+
                         Client discovery, lead development,
                         quotations, sales coordination and follow-up.
+
                     </p>
 
-                    <a href="#contact">
-                        View Project
+
+                    <a href="mailto:jibontalk2020@gmail.com?subject=Business%20Development"
+                       data-i18n="project_details">
+
+                        Discuss Project
                         <i class="fas fa-arrow-right"></i>
+
                     </a>
 
                 </div>
@@ -787,111 +1172,55 @@
             </article>
 
 
-        </div>
 
-    </div>
+            <!-- PROJECT 4 -->
 
-</section>
+            <article class="project-card">
 
+                <div class="project-image">
 
-<!-- ================= EDUCATION ================= -->
+                    <img src="assets/projects/project-4.jpg"
+                         alt="Web Development"
+                         onerror="this.parentElement.classList.add('no-image');">
 
-<section id="education" class="section">
+                    <div class="project-image-fallback">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
 
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                EDUCATION
-            </p>
-
-            <h2>
-                Education & Training
-            </h2>
-
-        </div>
-
-
-        <div class="education-grid">
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-graduation-cap"></i>
                 </div>
 
-                <div>
 
-                    <span>
-                        2021 — 2025
+                <div class="project-content">
+
+                    <span class="project-category">
+                        DIGITAL
                     </span>
 
-                    <h3>
-                        B.Sc. in Mechanical Engineering
+
+                    <h3 data-i18n="project4_title">
+                        Website Development
                     </h3>
 
-                    <p>
-                        Changsha University of Science &
-                        Technology, China
+
+                    <p data-i18n="project4_text">
+
+                        Personal and business website development,
+                        digital content and online presence.
+
                     </p>
 
-                </div>
 
-            </div>
+                    <a href="mailto:jibontalk2020@gmail.com?subject=Web%20Development"
+                       data-i18n="project_details">
 
+                        Discuss Project
+                        <i class="fas fa-arrow-right"></i>
 
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-language"></i>
-                </div>
-
-                <div>
-
-                    <span>
-                        Chinese Language
-                    </span>
-
-                    <h3>
-                        HSK 4
-                    </h3>
-
-                    <p>
-                        Chinese language proficiency with
-                        practical business communication experience.
-                    </p>
+                    </a>
 
                 </div>
 
-            </div>
-
-
-            <div class="education-card">
-
-                <div class="education-icon">
-                    <i class="fas fa-robot"></i>
-                </div>
-
-                <div>
-
-                    <span>
-                        Practical Training
-                    </span>
-
-                    <h3>
-                        Industrial Automation
-                    </h3>
-
-                    <p>
-                        PLC, FluidSIM and industrial automation
-                        practical exposure.
-                    </p>
-
-                </div>
-
-            </div>
+            </article>
 
         </div>
 
@@ -900,89 +1229,37 @@
 </section>
 
 
-<!-- ================= CERTIFICATES ================= -->
 
-<section class="section section-dark">
+<!-- =====================================================
+     CONTACT
+===================================================== -->
 
-    <div class="container">
-
-        <div class="section-heading">
-
-            <p class="section-label">
-                CERTIFICATES
-            </p>
-
-            <h2>
-                Credentials
-            </h2>
-
-        </div>
-
-
-        <div class="certificate-grid">
-
-            <div class="certificate-card">
-
-                <img src="assets/certificates/degree.jpg"
-                     alt="Degree certificate">
-
-                <h3>
-                    Bachelor's Degree
-                </h3>
-
-            </div>
-
-
-            <div class="certificate-card">
-
-                <img src="assets/certificates/hsk4.jpg"
-                     alt="HSK certificate">
-
-                <h3>
-                    HSK Certificate
-                </h3>
-
-            </div>
-
-
-            <div class="certificate-card">
-
-                <img src="assets/certificates/internship.jpg"
-                     alt="Internship certificate">
-
-                <h3>
-                    Internship / Training
-                </h3>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="section contact-section">
+<section class="section contact-section" id="contact">
 
     <div class="container">
 
-        <div class="section-heading">
+        <div class="section-header">
 
-            <p class="section-label">
+            <p class="section-label"
+               data-i18n="contact_label">
+
                 CONTACT
+
             </p>
 
-            <h2>
+            <h2 data-i18n="contact_title">
+
                 Let's Work Together
+
             </h2>
 
-            <p>
-                For business collaboration, professional opportunities,
-                engineering projects or international business communication,
-                feel free to contact me.
+
+            <p data-i18n="contact_intro">
+
+                For professional opportunities, business
+                collaboration, engineering projects or
+                international communication, feel free to contact me.
+
             </p>
 
         </div>
@@ -991,9 +1268,15 @@
         <div class="contact-grid">
 
 
-            <div class="contact-info">
+            <!-- CONTACT INFORMATION -->
 
-                <div class="contact-item">
+            <div class="contact-information">
+
+
+                <!-- EMAIL -->
+
+                <a href="mailto:jibontalk2020@gmail.com"
+                   class="contact-item">
 
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
@@ -1001,18 +1284,24 @@
 
                     <div>
 
-                        <span>Email</span>
+                        <span data-i18n="email_label">
+                            Email
+                        </span>
 
-                        <a href="mailto:YOUR_EMAIL@gmail.com">
-                            YOUR_EMAIL@gmail.com
-                        </a>
+                        <strong>
+                            jibontalk2020@gmail.com
+                        </strong>
 
                     </div>
 
-                </div>
+                </a>
 
 
-                <div class="contact-item">
+
+                <!-- PHONE -->
+
+                <a href="tel:+8801737975400"
+                   class="contact-item">
 
                     <div class="contact-icon">
                         <i class="fas fa-phone"></i>
@@ -1020,16 +1309,73 @@
 
                     <div>
 
-                        <span>Phone</span>
+                        <span data-i18n="phone_label">
+                            Phone
+                        </span>
 
-                        <a href="tel:+8801XXXXXXXXX">
-                            +880 1XXXXXXXXX
-                        </a>
+                        <strong>
+                            01737975400
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- WHATSAPP -->
+
+                <a href="https://wa.me/8801737975400"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-item">
+
+                    <div class="contact-icon whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+
+                    <div>
+
+                        <span data-i18n="whatsapp_label">
+                            WhatsApp
+                        </span>
+
+                        <strong>
+                            01737975400
+                        </strong>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- PERMANENT ADDRESS -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-house"></i>
+                    </div>
+
+                    <div>
+
+                        <span data-i18n="permanent_label">
+                            Permanent Address
+                        </span>
+
+                        <strong data-i18n="permanent_address">
+                            Paul Para, Sardiar, Shankhari Para,
+                            Ataikula, Pabna - 6600
+                        </strong>
 
                     </div>
 
                 </div>
 
+
+
+                <!-- PRESENT ADDRESS -->
 
                 <div class="contact-item">
 
@@ -1039,75 +1385,197 @@
 
                     <div>
 
-                        <span>Location</span>
+                        <span data-i18n="present_label">
+                            Present Address
+                        </span>
 
-                        <p>
-                            Dhaka, Bangladesh
-                        </p>
+                        <strong data-i18n="present_address">
+                            Bara Rangamatia, Durgapur, Ashulia,
+                            Savar, Dhaka – 1341
+                        </strong>
 
                     </div>
 
                 </div>
 
 
-                <div class="contact-item">
+
+                <!-- LINKEDIN -->
+
+                <a href="https://www.linkedin.com/in/jebon-kumar-sarker-667204406/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="contact-item">
 
                     <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
+                        <i class="fab fa-linkedin-in"></i>
                     </div>
 
                     <div>
 
-                        <span>LinkedIn</span>
+                        <span>
+                            LinkedIn
+                        </span>
 
-                        <a href="https://www.linkedin.com/"
-                           target="_blank">
-                            Connect on LinkedIn
-                        </a>
+                        <strong>
+                            Jebon Kumar Sarker
+                        </strong>
 
                     </div>
 
-                </div>
+                </a>
+
 
             </div>
 
 
-            <form class="contact-form"
-                  id="contactForm">
 
-                <div class="form-row">
+            <!-- MESSAGE FORM -->
 
-                    <input type="text"
-                           name="name"
-                           placeholder="Your Name"
-                           required>
+            <div class="contact-form-wrapper">
 
-                    <input type="email"
-                           name="email"
-                           placeholder="Your Email"
-                           required>
+                <h3 data-i18n="message_title">
+                    Send Me a Message
+                </h3>
 
-                </div>
 
-                <input type="text"
-                       name="subject"
-                       placeholder="Subject"
-                       required>
+                <p data-i18n="message_intro">
+                    Your message will be prepared and sent to my email.
+                </p>
 
-                <textarea name="message"
-                          rows="7"
-                          placeholder="Your Message"
-                          required></textarea>
 
-                <button type="submit"
-                        class="btn btn-primary">
+                <form id="contactForm">
 
-                    Send Message
-                    <i class="fas fa-paper-plane"></i>
 
-                </button>
+                    <div class="form-row">
 
-            </form>
+                        <div class="form-group">
+
+                            <label data-i18n="form_name">
+                                Your Name
+                            </label>
+
+                            <input type="text"
+                                   id="name"
+                                   required
+                                   placeholder="Your Name">
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label data-i18n="form_email">
+                                Your Email
+                            </label>
+
+                            <input type="email"
+                                   id="email"
+                                   required
+                                   placeholder="Your Email">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="form_subject">
+                            Subject
+                        </label>
+
+                        <input type="text"
+                               id="subject"
+                               required
+                               placeholder="Subject">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label data-i18n="form_message">
+                            Message
+                        </label>
+
+                        <textarea id="message"
+                                  rows="7"
+                                  required
+                                  placeholder="Write your message..."></textarea>
+
+                    </div>
+
+
+                    <button type="submit"
+                            class="btn btn-primary submit-btn">
+
+                        <span data-i18n="send_message">
+                            Send Message
+                        </span>
+
+                        <i class="fas fa-paper-plane"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="contact-social">
+
+            <p data-i18n="follow_me">
+                Connect with me
+            </p>
+
+
+            <div>
+
+                <a href="https://www.linkedin.com/in/jebon-kumar-sarker-667204406/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fab fa-linkedin-in"></i>
+                    LinkedIn
+
+                </a>
+
+
+                <a href="https://web.facebook.com/JebonKumar2021/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fab fa-facebook-f"></i>
+                    Facebook
+
+                </a>
+
+
+                <a href="https://www.instagram.com/jebonkumarsarker/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fab fa-instagram"></i>
+                    Instagram
+
+                </a>
+
+
+                <a href="https://www.youtube.com/@jebonkumarsarker564"
+                   target="_blank"
+                   rel="noopener noreferrer">
+
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+
+                </a>
+
+            </div>
 
         </div>
 
@@ -1118,11 +1586,14 @@
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
-    <div class="container footer-content">
+    <div class="container footer-main">
 
         <div>
 
@@ -1130,38 +1601,23 @@
                 Jebon<span>.</span>
             </a>
 
-            <p>
+            <p data-i18n="footer_text">
+
                 Mechanical Engineer • Business Professional •
                 Chinese Communication
+
             </p>
 
         </div>
 
 
-        <div class="footer-social">
+        <a href="mailto:jibontalk2020@gmail.com"
+           class="footer-email">
 
-            <a href="https://github.com/jebonkumar2027"
-               target="_blank">
+            <i class="fas fa-envelope"></i>
+            jibontalk2020@gmail.com
 
-                <i class="fab fa-github"></i>
-
-            </a>
-
-            <a href="https://www.linkedin.com/"
-               target="_blank">
-
-                <i class="fab fa-linkedin"></i>
-
-            </a>
-
-            <a href="https://www.youtube.com/"
-               target="_blank">
-
-                <i class="fab fa-youtube"></i>
-
-            </a>
-
-        </div>
+        </a>
 
     </div>
 
@@ -1170,7 +1626,10 @@
 
         <p>
             © <span id="year"></span>
-            Jebon Kumar Sarker. All Rights Reserved.
+            Jebon Kumar Sarker.
+            <span data-i18n="rights">
+                All Rights Reserved.
+            </span>
         </p>
 
     </div>
@@ -1178,15 +1637,1247 @@
 </footer>
 
 
-<button id="backToTop"
-        class="back-to-top">
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<button class="back-to-top"
+        id="backToTop"
+        aria-label="Back to top">
 
     <i class="fas fa-arrow-up"></i>
 
 </button>
 
 
-<script src="script.js"></script>
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+/* =====================================================
+   TRANSLATIONS
+===================================================== */
+
+const translations = {
+
+    en: {
+
+        nav_home: "Home",
+        nav_about: "About",
+        nav_experience: "Experience",
+        nav_skills: "Skills",
+        nav_projects: "Projects",
+        nav_contact: "Contact",
+
+        hero_eyebrow:
+        "MECHANICAL ENGINEER • BUSINESS • COMMUNICATION",
+
+        hero_first_name:
+        "Jebon Kumar",
+
+        hero_last_name:
+        "Sarker",
+
+        hero_title:
+        "Mechanical Engineer & Business Operations Professional",
+
+        hero_description:
+        "Mechanical Engineering graduate with professional experience in Chinese-Bangla-English communication, business development, sales, manufacturing operations, administration and management coordination.",
+
+        contact_me:
+        "Contact Me",
+
+        view_experience:
+        "View Experience",
+
+        professional_experience:
+        "Professional Experience",
+
+        multilingual:
+        "Multilingual Communication",
+
+        about_label:
+        "ABOUT ME",
+
+        about_title:
+        "Engineering knowledge meets business execution.",
+
+        about_intro:
+        "I combine technical engineering knowledge with communication, business development and operational experience.",
+
+        about_p1:
+        "I am a Mechanical Engineering graduate from Changsha University of Science & Technology, China, with professional experience in multinational business environments in Bangladesh.",
+
+        about_p2:
+        "My professional work combines mechanical engineering knowledge, Chinese-Bangla-English communication, business development, sales coordination, manufacturing operations and management support.",
+
+        about_p3:
+        "I work closely with management, production teams, sales representatives, suppliers and clients, helping coordinate communication and business operations between Chinese management and local teams.",
+
+        highlight_engineering:
+        "Engineering",
+
+        highlight_engineering_text:
+        "Mechanical Design & Manufacturing",
+
+        highlight_language:
+        "Communication",
+
+        highlight_language_text:
+        "Chinese • Bangla • English",
+
+        highlight_business:
+        "Business",
+
+        highlight_business_text:
+        "Sales & Business Development",
+
+        highlight_operations:
+        "Operations",
+
+        highlight_operations_text:
+        "Manufacturing & Management Support",
+
+        about_card_title:
+        "Professional Focus",
+
+        focus_1:
+        "Mechanical Engineering",
+
+        focus_2:
+        "Manufacturing & Production",
+
+        focus_3:
+        "Chinese Business Communication",
+
+        focus_4:
+        "Business Development",
+
+        focus_5:
+        "Sales & Client Management",
+
+        focus_6:
+        "Administration & Operations",
+
+        focus_7:
+        "Web & Digital Projects",
+
+        experience_label:
+        "EXPERIENCE",
+
+        experience_title:
+        "Professional Journey",
+
+        experience_intro:
+        "Experience across engineering, manufacturing, business development, communication and management.",
+
+        exp1_date:
+        "2026 — Present",
+
+        exp1_title:
+        "Assistant to Managing Director",
+
+        exp1_description:
+        "Supporting Chinese management in communication, production coordination, business development, supplier communication, client management, administration and daily business operations.",
+
+        tag_management:
+        "Management Support",
+
+        tag_translation:
+        "Interpretation",
+
+        tag_sales:
+        "Sales",
+
+        tag_production:
+        "Production",
+
+        exp2_title:
+        "Interpreter / HR & Administration / Marketing",
+
+        exp2_description:
+        "Worked across interpretation, employee communication, administration, HR support and marketing activities in a Chinese-Bangladeshi business environment.",
+
+        exp3_title:
+        "Industrial Automation Internship",
+
+        exp3_description:
+        "Practical exposure to PLC concepts, FluidSIM simulation, motor control logic and industrial automation systems.",
+
+        exp4_title:
+        "Mechanical Engineering",
+
+        exp4_description:
+        "Studied mechanical engineering with practical exposure to mechanical design, manufacturing, automation and engineering systems.",
+
+        skills_label:
+        "SKILLS",
+
+        skills_title:
+        "Professional Capabilities",
+
+        skill1_title:
+        "Mechanical Engineering",
+
+        skill1_text:
+        "Mechanical design, manufacturing, automation and engineering fundamentals.",
+
+        skill2_title:
+        "Chinese Communication",
+
+        skill2_text:
+        "Chinese-Bangla-English interpretation, business communication and coordination.",
+
+        skill3_title:
+        "Business Development",
+
+        skill3_text:
+        "Lead generation, client communication, sales follow-up and business relationships.",
+
+        skill4_title:
+        "Manufacturing Operations",
+
+        skill4_text:
+        "Production reporting, factory coordination, inventory and operational follow-up.",
+
+        skill5_title:
+        "Management Support",
+
+        skill5_text:
+        "Documentation, reporting, coordination, communication and administrative support.",
+
+        skill6_title:
+        "Web & Digital",
+
+        skill6_text:
+        "HTML, CSS, JavaScript, websites, digital content and online business presence.",
+
+        projects_label:
+        "PROJECTS",
+
+        projects_title:
+        "Selected Professional Work",
+
+        projects_intro:
+        "A selection of engineering, manufacturing, business and digital work.",
+
+        project1_category:
+        "ENGINEERING",
+
+        project1_title:
+        "Mechanical Engineering Thesis",
+
+        project1_text:
+        "Machining and fixture design work related to a vane pump component.",
+
+        project2_category:
+        "MANUFACTURING",
+
+        project2_title:
+        "Building Material Production",
+
+        project2_text:
+        "Production coordination, reporting, packaging, inventory and operational follow-up.",
+
+        project3_category:
+        "BUSINESS",
+
+        project3_title:
+        "Business Development",
+
+        project3_text:
+        "Client discovery, lead development, quotations, sales coordination and follow-up.",
+
+        project4_title:
+        "Website Development",
+
+        project4_text:
+        "Personal and business website development, digital content and online presence.",
+
+        project_details:
+        "Discuss Project",
+
+        contact_label:
+        "CONTACT",
+
+        contact_title:
+        "Let's Work Together",
+
+        contact_intro:
+        "For professional opportunities, business collaboration, engineering projects or international communication, feel free to contact me.",
+
+        email_label:
+        "Email",
+
+        phone_label:
+        "Phone",
+
+        whatsapp_label:
+        "WhatsApp",
+
+        permanent_label:
+        "Permanent Address",
+
+        permanent_address:
+        "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
+
+        present_label:
+        "Present Address",
+
+        present_address:
+        "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
+
+        message_title:
+        "Send Me a Message",
+
+        message_intro:
+        "Your message will be prepared and sent to my email.",
+
+        form_name:
+        "Your Name",
+
+        form_email:
+        "Your Email",
+
+        form_subject:
+        "Subject",
+
+        form_message:
+        "Message",
+
+        send_message:
+        "Send Message",
+
+        follow_me:
+        "Connect with me",
+
+        footer_text:
+        "Mechanical Engineer • Business Professional • Chinese Communication",
+
+        rights:
+        "All Rights Reserved."
+
+    },
+
+
+    zh: {
+
+        nav_home: "首页",
+        nav_about: "关于我",
+        nav_experience: "工作经历",
+        nav_skills: "专业技能",
+        nav_projects: "项目",
+        nav_contact: "联系我",
+
+        hero_eyebrow:
+        "机械工程师 • 商务 • 跨语言沟通",
+
+        hero_first_name:
+        "杰本·库马尔",
+
+        hero_last_name:
+        "萨克",
+
+        hero_title:
+        "机械工程师与商务运营专业人士",
+
+        hero_description:
+        "机械工程专业毕业生，拥有中文、孟加拉语和英语沟通，以及商务开发、销售、生产运营、行政管理和管理协调方面的专业经验。",
+
+        contact_me:
+        "联系我",
+
+        view_experience:
+        "查看经历",
+
+        professional_experience:
+        "专业工作经验",
+
+        multilingual:
+        "多语言沟通",
+
+        about_label:
+        "关于我",
+
+        about_title:
+        "将工程知识与商务执行相结合。",
+
+        about_intro:
+        "我将工程技术知识、沟通能力、商务开发和运营经验结合在实际工作中。",
+
+        about_p1:
+        "我毕业于中国长沙理工大学机械工程专业，并在孟加拉国的中孟跨国商业环境中拥有专业工作经验。",
+
+        about_p2:
+        "我的工作涉及机械工程知识、中孟英三语沟通、商务开发、销售协调、生产运营以及管理支持。",
+
+        about_p3:
+        "我与公司管理层、生产团队、销售人员、供应商和客户密切合作，协助中国管理层与孟加拉本地团队之间的沟通及业务运营。",
+
+        highlight_engineering:
+        "工程",
+
+        highlight_engineering_text:
+        "机械设计与制造",
+
+        highlight_language:
+        "沟通",
+
+        highlight_language_text:
+        "中文 • 孟加拉语 • 英语",
+
+        highlight_business:
+        "商务",
+
+        highlight_business_text:
+        "销售与商务开发",
+
+        highlight_operations:
+        "运营",
+
+        highlight_operations_text:
+        "生产与管理支持",
+
+        about_card_title:
+        "专业方向",
+
+        focus_1:
+        "机械工程",
+
+        focus_2:
+        "制造与生产",
+
+        focus_3:
+        "中文商务沟通",
+
+        focus_4:
+        "商务开发",
+
+        focus_5:
+        "销售与客户管理",
+
+        focus_6:
+        "行政与运营",
+
+        focus_7:
+        "网站与数字项目",
+
+        experience_label:
+        "工作经历",
+
+        experience_title:
+        "职业经历",
+
+        experience_intro:
+        "涵盖工程、制造、商务开发、沟通和管理支持方面的工作经验。",
+
+        exp1_date:
+        "2026年至今",
+
+        exp1_title:
+        "总经理助理",
+
+        exp1_description:
+        "协助中国管理层进行沟通、生产协调、商务开发、供应商沟通、客户管理、行政工作及日常业务运营。",
+
+        tag_management:
+        "管理支持",
+
+        tag_translation:
+        "翻译",
+
+        tag_sales:
+        "销售",
+
+        tag_production:
+        "生产",
+
+        exp2_title:
+        "翻译 / 人事行政 / 市场",
+
+        exp2_description:
+        "负责翻译、员工沟通、行政、人事支持和市场推广等工作，服务于中孟商业环境。",
+
+        exp3_title:
+        "工业自动化实习",
+
+        exp3_description:
+        "接触PLC、FluidSIM仿真、电机控制逻辑和工业自动化系统。",
+
+        exp4_title:
+        "机械工程",
+
+        exp4_description:
+        "学习机械工程，并获得机械设计、制造、自动化和工程系统方面的实践知识。",
+
+        skills_label:
+        "技能",
+
+        skills_title:
+        "专业能力",
+
+        skill1_title:
+        "机械工程",
+
+        skill1_text:
+        "机械设计、制造、自动化及工程基础。",
+
+        skill2_title:
+        "中文沟通",
+
+        skill2_text:
+        "中文、孟加拉语和英语翻译、商务沟通及协调。",
+
+        skill3_title:
+        "商务开发",
+
+        skill3_text:
+        "客户开发、客户沟通、销售跟进和商务关系维护。",
+
+        skill4_title:
+        "生产运营",
+
+        skill4_text:
+        "生产报告、工厂协调、库存及运营跟进。",
+
+        skill5_title:
+        "管理支持",
+
+        skill5_text:
+        "文件、报告、协调、沟通和行政支持。",
+
+        skill6_title:
+        "网站与数字技术",
+
+        skill6_text:
+        "HTML、CSS、JavaScript、网站开发、数字内容和线上业务展示。",
+
+        projects_label:
+        "项目",
+
+        projects_title:
+        "专业项目",
+
+        projects_intro:
+        "工程、制造、商务和数字领域的部分项目。",
+
+        project1_category:
+        "工程",
+
+        project1_title:
+        "机械工程毕业设计",
+
+        project1_text:
+        "与叶片泵零件相关的加工及夹具设计工作。",
+
+        project2_category:
+        "制造",
+
+        project2_title:
+        "建筑材料生产",
+
+        project2_text:
+        "生产协调、生产报告、包装、库存和运营跟进。",
+
+        project3_category:
+        "商务",
+
+        project3_title:
+        "商务开发",
+
+        project3_text:
+        "客户开发、项目线索、报价、销售协调和客户跟进。",
+
+        project4_title:
+        "网站开发",
+
+        project4_text:
+        "个人及企业网站开发、数字内容和线上品牌建设。",
+
+        project_details:
+        "洽谈项目",
+
+        contact_label:
+        "联系",
+
+        contact_title:
+        "期待与您合作",
+
+        contact_intro:
+        "如有职业机会、商务合作、工程项目或国际商务沟通需求，欢迎联系我。",
+
+        email_label:
+        "邮箱",
+
+        phone_label:
+        "电话",
+
+        whatsapp_label:
+        "WhatsApp",
+
+        permanent_label:
+        "永久地址",
+
+        permanent_address:
+        "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
+
+        present_label:
+        "现居地址",
+
+        present_address:
+        "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
+
+        message_title:
+        "给我留言",
+
+        message_intro:
+        "您的信息将通过电子邮件发送给我。",
+
+        form_name:
+        "您的姓名",
+
+        form_email:
+        "您的邮箱",
+
+        form_subject:
+        "主题",
+
+        form_message:
+        "留言",
+
+        send_message:
+        "发送消息",
+
+        follow_me:
+        "联系我的社交平台",
+
+        footer_text:
+        "机械工程师 • 商务专业人士 • 中文沟通",
+
+        rights:
+        "版权所有。"
+
+    },
+
+
+    bn: {
+
+        nav_home: "হোম",
+        nav_about: "আমার সম্পর্কে",
+        nav_experience: "অভিজ্ঞতা",
+        nav_skills: "দক্ষতা",
+        nav_projects: "প্রকল্প",
+        nav_contact: "যোগাযোগ",
+
+        hero_eyebrow:
+        "মেকানিক্যাল ইঞ্জিনিয়ার • ব্যবসা • যোগাযোগ",
+
+        hero_first_name:
+        "জেবন কুমার",
+
+        hero_last_name:
+        "সরকার",
+
+        hero_title:
+        "মেকানিক্যাল ইঞ্জিনিয়ার ও বিজনেস অপারেশনস প্রফেশনাল",
+
+        hero_description:
+        "মেকানিক্যাল ইঞ্জিনিয়ারিংয়ে স্নাতক এবং চীনা-বাংলা-ইংরেজি যোগাযোগ, ব্যবসা উন্নয়ন, বিক্রয়, উৎপাদন কার্যক্রম, প্রশাসন ও ব্যবস্থাপনা সমন্বয়ে পেশাগত অভিজ্ঞতা রয়েছে।",
+
+        contact_me:
+        "যোগাযোগ করুন",
+
+        view_experience:
+        "অভিজ্ঞতা দেখুন",
+
+        professional_experience:
+        "পেশাগত অভিজ্ঞতা",
+
+        multilingual:
+        "বহুভাষিক যোগাযোগ",
+
+        about_label:
+        "আমার সম্পর্কে",
+
+        about_title:
+        "ইঞ্জিনিয়ারিং জ্ঞান ও ব্যবসায়িক দক্ষতার সমন্বয়।",
+
+        about_intro:
+        "আমি প্রযুক্তিগত ইঞ্জিনিয়ারিং জ্ঞান, যোগাযোগ, ব্যবসা উন্নয়ন এবং অপারেশনাল অভিজ্ঞতাকে একসাথে কাজে লাগাই।",
+
+        about_p1:
+        "আমি চীনের Changsha University of Science & Technology থেকে মেকানিক্যাল ইঞ্জিনিয়ারিংয়ে স্নাতক এবং বাংলাদেশে বহুজাতিক ব্যবসায়িক পরিবেশে পেশাগত অভিজ্ঞতা অর্জন করেছি।",
+
+        about_p2:
+        "আমার পেশাগত কাজের মধ্যে মেকানিক্যাল ইঞ্জিনিয়ারিং জ্ঞান, চীনা-বাংলা-ইংরেজি যোগাযোগ, ব্যবসা উন্নয়ন, বিক্রয় সমন্বয়, উৎপাদন কার্যক্রম এবং ব্যবস্থাপনা সহায়তা রয়েছে।",
+
+        about_p3:
+        "আমি ব্যবস্থাপনা, উৎপাদন দল, বিক্রয় প্রতিনিধি, সরবরাহকারী ও ক্লায়েন্টদের সাথে কাজ করি এবং চীনা ব্যবস্থাপনা ও স্থানীয় দলের মধ্যে যোগাযোগ ও ব্যবসায়িক কার্যক্রম সমন্বয় করতে সহায়তা করি।",
+
+        highlight_engineering:
+        "ইঞ্জিনিয়ারিং",
+
+        highlight_engineering_text:
+        "মেকানিক্যাল ডিজাইন ও ম্যানুফ্যাকচারিং",
+
+        highlight_language:
+        "যোগাযোগ",
+
+        highlight_language_text:
+        "চীনা • বাংলা • ইংরেজি",
+
+        highlight_business:
+        "ব্যবসা",
+
+        highlight_business_text:
+        "সেলস ও বিজনেস ডেভেলপমেন্ট",
+
+        highlight_operations:
+        "অপারেশন",
+
+        highlight_operations_text:
+        "উৎপাদন ও ব্যবস্থাপনা সহায়তা",
+
+        about_card_title:
+        "পেশাগত ক্ষেত্র",
+
+        focus_1:
+        "মেকানিক্যাল ইঞ্জিনিয়ারিং",
+
+        focus_2:
+        "ম্যানুফ্যাকচারিং ও প্রোডাকশন",
+
+        focus_3:
+        "চীনা ব্যবসায়িক যোগাযোগ",
+
+        focus_4:
+        "বিজনেস ডেভেলপমেন্ট",
+
+        focus_5:
+        "সেলস ও ক্লায়েন্ট ম্যানেজমেন্ট",
+
+        focus_6:
+        "অ্যাডমিনিস্ট্রেশন ও অপারেশন",
+
+        focus_7:
+        "ওয়েব ও ডিজিটাল প্রজেক্ট",
+
+        experience_label:
+        "অভিজ্ঞতা",
+
+        experience_title:
+        "পেশাগত যাত্রা",
+
+        experience_intro:
+        "ইঞ্জিনিয়ারিং, ম্যানুফ্যাকচারিং, ব্যবসা উন্নয়ন, যোগাযোগ ও ব্যবস্থাপনার অভিজ্ঞতা।",
+
+        exp1_date:
+        "২০২৬ — বর্তমান",
+
+        exp1_title:
+        "ব্যবস্থাপনা পরিচালকের সহকারী",
+
+        exp1_description:
+        "চীনা ব্যবস্থাপনাকে যোগাযোগ, উৎপাদন সমন্বয়, ব্যবসা উন্নয়ন, সরবরাহকারী যোগাযোগ, ক্লায়েন্ট ম্যানেজমেন্ট, প্রশাসন ও দৈনন্দিন ব্যবসায়িক কার্যক্রমে সহায়তা করা।",
+
+        tag_management:
+        "ম্যানেজমেন্ট সাপোর্ট",
+
+        tag_translation:
+        "ইন্টারপ্রিটেশন",
+
+        tag_sales:
+        "সেলস",
+
+        tag_production:
+        "প্রোডাকশন",
+
+        exp2_title:
+        "ইন্টারপ্রেটার / HR ও অ্যাডমিন / মার্কেটিং",
+
+        exp2_description:
+        "চীনা-বাংলাদেশি ব্যবসায়িক পরিবেশে অনুবাদ, কর্মী যোগাযোগ, প্রশাসন, HR সহায়তা এবং মার্কেটিং কার্যক্রমে কাজ করেছি।",
+
+        exp3_title:
+        "ইন্ডাস্ট্রিয়াল অটোমেশন ইন্টার্নশিপ",
+
+        exp3_description:
+        "PLC, FluidSIM simulation, motor control logic এবং industrial automation systems সম্পর্কে ব্যবহারিক অভিজ্ঞতা অর্জন করেছি।",
+
+        exp4_title:
+        "মেকানিক্যাল ইঞ্জিনিয়ারিং",
+
+        exp4_description:
+        "মেকানিক্যাল ডিজাইন, ম্যানুফ্যাকচারিং, অটোমেশন এবং ইঞ্জিনিয়ারিং সিস্টেমের ব্যবহারিক জ্ঞান অর্জন করেছি।",
+
+        skills_label:
+        "দক্ষতা",
+
+        skills_title:
+        "পেশাগত সক্ষমতা",
+
+        skill1_title:
+        "মেকানিক্যাল ইঞ্জিনিয়ারিং",
+
+        skill1_text:
+        "মেকানিক্যাল ডিজাইন, ম্যানুফ্যাকচারিং, অটোমেশন এবং ইঞ্জিনিয়ারিংয়ের মৌলিক জ্ঞান।",
+
+        skill2_title:
+        "চীনা যোগাযোগ",
+
+        skill2_text:
+        "চীনা-বাংলা-ইংরেজি অনুবাদ, ব্যবসায়িক যোগাযোগ ও সমন্বয়।",
+
+        skill3_title:
+        "বিজনেস ডেভেলপমেন্ট",
+
+        skill3_text:
+        "লিড জেনারেশন, ক্লায়েন্ট যোগাযোগ, সেলস ফলো-আপ এবং ব্যবসায়িক সম্পর্ক।",
+
+        skill4_title:
+        "ম্যানুফ্যাকচারিং অপারেশন",
+
+        skill4_text:
+        "প্রোডাকশন রিপোর্টিং, ফ্যাক্টরি সমন্বয়, ইনভেন্টরি এবং অপারেশনাল ফলো-আপ।",
+
+        skill5_title:
+        "ম্যানেজমেন্ট সাপোর্ট",
+
+        skill5_text:
+        "ডকুমেন্টেশন, রিপোর্টিং, সমন্বয়, যোগাযোগ এবং প্রশাসনিক সহায়তা।",
+
+        skill6_title:
+        "ওয়েব ও ডিজিটাল",
+
+        skill6_text:
+        "HTML, CSS, JavaScript, ওয়েবসাইট, ডিজিটাল কনটেন্ট এবং অনলাইন ব্যবসায়িক উপস্থিতি।",
+
+        projects_label:
+        "প্রকল্প",
+
+        projects_title:
+        "নির্বাচিত পেশাগত কাজ",
+
+        projects_intro:
+        "ইঞ্জিনিয়ারিং, ম্যানুফ্যাকচারিং, ব্যবসা এবং ডিজিটাল কাজের কিছু উদাহরণ।",
+
+        project1_category:
+        "ইঞ্জিনিয়ারিং",
+
+        project1_title:
+        "মেকানিক্যাল ইঞ্জিনিয়ারিং থিসিস",
+
+        project1_text:
+        "ভেন পাম্পের একটি কম্পোনেন্টের machining ও fixture design সম্পর্কিত কাজ।",
+
+        project2_category:
+        "ম্যানুফ্যাকচারিং",
+
+        project2_title:
+        "বিল্ডিং ম্যাটেরিয়াল প্রোডাকশন",
+
+        project2_text:
+        "প্রোডাকশন সমন্বয়, রিপোর্টিং, প্যাকেজিং, ইনভেন্টরি ও অপারেশনাল ফলো-আপ।",
+
+        project3_category:
+        "ব্যবসা",
+
+        project3_title:
+        "বিজনেস ডেভেলপমেন্ট",
+
+        project3_text:
+        "ক্লায়েন্ট অনুসন্ধান, লিড ডেভেলপমেন্ট, কোটেশন, সেলস সমন্বয় ও ফলো-আপ।",
+
+        project4_title:
+        "ওয়েবসাইট ডেভেলপমেন্ট",
+
+        project4_text:
+        "ব্যক্তিগত ও ব্যবসায়িক ওয়েবসাইট, ডিজিটাল কনটেন্ট এবং অনলাইন উপস্থিতি তৈরি।",
+
+        project_details:
+        "প্রকল্প নিয়ে আলোচনা করুন",
+
+        contact_label:
+        "যোগাযোগ",
+
+        contact_title:
+        "চলুন একসাথে কাজ করি",
+
+        contact_intro:
+        "পেশাগত সুযোগ, ব্যবসায়িক সহযোগিতা, ইঞ্জিনিয়ারিং প্রকল্প অথবা আন্তর্জাতিক যোগাযোগের জন্য আমার সাথে যোগাযোগ করতে পারেন।",
+
+        email_label:
+        "ইমেইল",
+
+        phone_label:
+        "ফোন",
+
+        whatsapp_label:
+        "হোয়াটসঅ্যাপ",
+
+        permanent_label:
+        "স্থায়ী ঠিকানা",
+
+        permanent_address:
+        "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
+
+        present_label:
+        "বর্তমান ঠিকানা",
+
+        present_address:
+        "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
+
+        message_title:
+        "আমাকে একটি মেসেজ পাঠান",
+
+        message_intro:
+        "আপনার মেসেজ আমার ইমেইলে পাঠানোর জন্য প্রস্তুত হবে।",
+
+        form_name:
+        "আপনার নাম",
+
+        form_email:
+        "আপনার ইমেইল",
+
+        form_subject:
+        "বিষয়",
+
+        form_message:
+        "মেসেজ",
+
+        send_message:
+        "মেসেজ পাঠান",
+
+        follow_me:
+        "আমার সাথে যুক্ত থাকুন",
+
+        footer_text:
+        "মেকানিক্যাল ইঞ্জিনিয়ার • বিজনেস প্রফেশনাল • চীনা যোগাযোগ",
+
+        rights:
+        "সর্বস্বত্ব সংরক্ষিত।"
+
+    }
+
+};
+
+
+
+/* =====================================================
+   LANGUAGE SWITCHING
+===================================================== */
+
+const languageBtn =
+    document.getElementById("languageBtn");
+
+const languageMenu =
+    document.getElementById("languageMenu");
+
+const currentLanguage =
+    document.getElementById("currentLanguage");
+
+
+languageBtn.addEventListener("click", function () {
+
+    languageMenu.classList.toggle("active");
+
+});
+
+
+document.addEventListener("click", function (event) {
+
+    if (!languageBtn.contains(event.target) &&
+        !languageMenu.contains(event.target)) {
+
+        languageMenu.classList.remove("active");
+
+    }
+
+});
+
+
+document.querySelectorAll("[data-lang]").forEach(button => {
+
+    button.addEventListener("click", function () {
+
+        const lang = this.dataset.lang;
+
+        changeLanguage(lang);
+
+        languageMenu.classList.remove("active");
+
+    });
+
+});
+
+
+function changeLanguage(lang) {
+
+    const selected =
+        translations[lang];
+
+    if (!selected) return;
+
+
+    document.querySelectorAll("[data-i18n]").forEach(element => {
+
+        const key =
+            element.dataset.i18n;
+
+        if (selected[key]) {
+
+            element.textContent =
+                selected[key];
+
+        }
+
+    });
+
+
+    document.documentElement.lang = lang;
+
+
+    if (lang === "en") {
+        currentLanguage.textContent = "EN";
+    }
+
+    if (lang === "zh") {
+        currentLanguage.textContent = "中文";
+    }
+
+    if (lang === "bn") {
+        currentLanguage.textContent = "বাংলা";
+    }
+
+
+    localStorage.setItem(
+        "preferredLanguage",
+        lang
+    );
+
+}
+
+
+const savedLanguage =
+    localStorage.getItem("preferredLanguage") || "en";
+
+changeLanguage(savedLanguage);
+
+
+
+/* =====================================================
+   DARK / LIGHT MODE
+===================================================== */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+function setTheme(theme) {
+
+    if (theme === "dark") {
+
+        document.body.classList.add("dark-mode");
+
+        themeToggle.innerHTML =
+            '<i class="fas fa-sun"></i>';
+
+        localStorage.setItem(
+            "theme",
+            "dark"
+        );
+
+    } else {
+
+        document.body.classList.remove("dark-mode");
+
+        themeToggle.innerHTML =
+            '<i class="fas fa-moon"></i>';
+
+        localStorage.setItem(
+            "theme",
+            "light"
+        );
+
+    }
+
+}
+
+
+const savedTheme =
+    localStorage.getItem("theme") || "light";
+
+setTheme(savedTheme);
+
+
+themeToggle.addEventListener("click", function () {
+
+    const isDark =
+        document.body.classList.contains("dark-mode");
+
+    setTheme(
+        isDark ? "light" : "dark"
+    );
+
+});
+
+
+
+/* =====================================================
+   MOBILE NAVIGATION
+===================================================== */
+
+const menuToggle =
+    document.getElementById("menuToggle");
+
+const navMenu =
+    document.getElementById("navMenu");
+
+
+menuToggle.addEventListener("click", function () {
+
+    navMenu.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".nav-menu a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        navMenu.classList.remove("active");
+
+    });
+
+});
+
+
+
+/* =====================================================
+   BACK TO TOP
+===================================================== */
+
+const backToTop =
+    document.getElementById("backToTop");
+
+
+window.addEventListener("scroll", function () {
+
+    if (window.scrollY > 500) {
+
+        backToTop.classList.add("show");
+
+    } else {
+
+        backToTop.classList.remove("show");
+
+    }
+
+});
+
+
+backToTop.addEventListener("click", function () {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+contactForm.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+
+    const name =
+        document.getElementById("name").value.trim();
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const subject =
+        document.getElementById("subject").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+
+    const emailSubject =
+        subject ||
+        "Message from Jebon Kumar Sarker Portfolio";
+
+
+    const emailBody =
+        `Name: ${name}
+
+Email: ${email}
+
+Message:
+
+${message}`;
+
+
+    const mailto =
+        `mailto:jibontalk2020@gmail.com` +
+        `?subject=${encodeURIComponent(emailSubject)}` +
+        `&body=${encodeURIComponent(emailBody)}`;
+
+
+    window.location.href = mailto;
+
+});
+
+
+
+/* =====================================================
+   CURRENT YEAR
+===================================================== */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+
+/* =====================================================
+   HEADER SCROLL EFFECT
+===================================================== */
+
+window.addEventListener("scroll", function () {
+
+    const header =
+        document.getElementById("header");
+
+    if (window.scrollY > 30) {
+
+        header.classList.add("scrolled");
+
+    } else {
+
+        header.classList.remove("scrolled");
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
