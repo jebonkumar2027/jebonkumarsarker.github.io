@@ -1,2297 +1,1049 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
 
-/* =========================================================
-   ROOT VARIABLES
-========================================================= */
+    <meta charset="UTF-8">
 
-:root {
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    --bg: #070b12;
-    --bg-soft: #0b111b;
-    --bg-card: #0d141f;
+    <meta
+        name="description"
+        content="Jebon Kumar Sarker — Management Assistant, Chinese Interpreter, Mechanical Engineering graduate, and multinational business professional."
+    >
 
-    --text: #f4f7fb;
-    --text-soft: rgba(244, 247, 251, 0.68);
-    --text-muted: rgba(244, 247, 251, 0.42);
+    <meta
+        name="keywords"
+        content="Jebon Kumar Sarker, Mechanical Engineer, Chinese Interpreter, Management Assistant, Business Development, Manufacturing, Automation, Bangladesh"
+    >
 
-    --accent: #00c8ff;
-    --accent-soft: rgba(0, 200, 255, 0.12);
+    <meta name="author" content="Jebon Kumar Sarker">
 
-    --border: rgba(255, 255, 255, 0.09);
-    --border-light: rgba(255, 255, 255, 0.14);
+    <title>Jebon Kumar Sarker | Management Assistant · Chinese Interpreter</title>
 
-    --container: 1240px;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    --font-body: "Inter", sans-serif;
-    --font-heading: "Space Grotesk", sans-serif;
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    --transition: 0.3s ease;
-}
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
+    <link rel="stylesheet" href="style.css">
 
-/* =========================================================
-   RESET
-========================================================= */
+</head>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
+<body>
 
-html {
-    scroll-behavior: smooth;
-}
 
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-body {
-    background: var(--bg);
-    color: var(--text);
+    <header class="site-header" id="header">
 
-    font-family: var(--font-body);
+        <div class="container header-container">
 
-    line-height: 1.6;
+            <a href="#home" class="logo">
+                Jebon<span>.</span>
+            </a>
 
-    overflow-x: hidden;
+            <nav class="main-nav" id="nav">
 
-    -webkit-font-smoothing: antialiased;
-}
+                <a href="#home" class="nav-link active">
+                    Home
+                </a>
 
+                <a href="#about" class="nav-link">
+                    About
+                </a>
 
-img {
-    display: block;
-    max-width: 100%;
-}
+                <a href="#education" class="nav-link">
+                    Education
+                </a>
 
+                <a href="#experience" class="nav-link">
+                    Experience
+                </a>
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
+                <a href="#skills" class="nav-link">
+                    Skills
+                </a>
 
+                <a href="#projects" class="nav-link">
+                    Projects
+                </a>
 
-button {
-    font: inherit;
-}
+                <a href="#contact" class="nav-link">
+                    Contact
+                </a>
 
+            </nav>
 
-::selection {
-    background: var(--accent);
-    color: #001018;
-}
 
+            <button
+                class="menu-button"
+                id="menu-button"
+                aria-label="Open navigation menu"
+                type="button"
+            >
 
-/* =========================================================
-   GLOBAL CONTAINER
-========================================================= */
+                <span></span>
+                <span></span>
+                <span></span>
 
-.container {
-    width: min(
-        calc(100% - 80px),
-        var(--container)
-    );
+            </button>
 
-    margin: 0 auto;
-}
+        </div>
 
+    </header>
 
-/* =========================================================
-   HEADER
-========================================================= */
 
-.site-header {
 
-    position: fixed;
+    <main>
 
-    top: 0;
-    left: 0;
 
-    width: 100%;
+        <!-- =========================
+             HERO
+        ========================== -->
 
-    z-index: 1000;
+        <section id="home" class="hero-section">
 
-    border-bottom: 1px solid transparent;
+            <div class="hero-grid"></div>
 
-    transition:
-        background var(--transition),
-        border-color var(--transition),
-        backdrop-filter var(--transition);
-}
+            <div class="container hero-container">
 
 
-.site-header.scrolled {
+                <div class="hero-content">
 
-    background: rgba(7, 11, 18, 0.78);
+                    <div class="hero-label">
 
-    border-color: var(--border);
+                        <span class="status-dot"></span>
 
-    backdrop-filter: blur(18px);
+                        Chinese Interpreter · Management Assistant
 
-    -webkit-backdrop-filter: blur(18px);
-}
+                    </div>
 
 
-.header-container {
+                    <h1 class="hero-title">
 
-    height: 82px;
+                        JEBON KUMAR
 
-    display: flex;
+                        <span>SARKER</span>
 
-    align-items: center;
+                    </h1>
 
-    justify-content: space-between;
-}
 
+                    <div class="hero-subtitle">
 
-/* Logo */
+                        Business · Administration · Technical Coordination · Multinational Operations
 
-.logo {
+                    </div>
 
-    font-family: var(--font-heading);
 
-    font-size: 1.35rem;
+                    <p class="hero-description">
 
-    font-weight: 700;
+                        Mechanical Engineering graduate working in a Chinese
+                        building-material company in Bangladesh, supporting
+                        management, business operations, administration,
+                        communication and technical coordination in a
+                        multinational environment.
 
-    letter-spacing: -0.04em;
-}
+                    </p>
 
 
-.logo span,
-.footer-logo span {
-    color: var(--accent);
-}
+                    <div class="hero-buttons">
 
+                        <a
+                            href="#about"
+                            class="btn btn-primary"
+                        >
 
-/* Navigation */
+                            Explore My Profile
 
-.main-nav {
+                            <span>↗</span>
 
-    display: flex;
+                        </a>
 
-    align-items: center;
 
-    gap: 34px;
-}
+                        <a
+                            href="#contact"
+                            class="btn btn-secondary"
+                        >
 
+                            Contact Me
 
-.nav-link {
+                            <span>→</span>
 
-    position: relative;
+                        </a>
 
-    color: var(--text-muted);
+                    </div>
 
-    font-size: 0.76rem;
 
-    font-weight: 600;
+                    <div class="hero-meta">
 
-    letter-spacing: 0.05em;
 
-    transition: color var(--transition);
-}
+                        <div class="hero-meta-item">
 
+                            <span>
+                                EDUCATION
+                            </span>
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--text);
-}
+                            <strong>
+                                Mechanical Engineering
+                            </strong>
 
+                        </div>
 
-.nav-link::after {
 
-    content: "";
+                        <div class="hero-meta-item">
 
-    position: absolute;
+                            <span>
+                                LANGUAGE
+                            </span>
 
-    left: 0;
-    bottom: -10px;
+                            <strong>
+                                Chinese · Bangla · English
+                            </strong>
 
-    width: 0;
-    height: 1px;
+                        </div>
 
-    background: var(--accent);
 
-    transition: width var(--transition);
-}
+                        <div class="hero-meta-item">
 
+                            <span>
+                                GRADUATED
+                            </span>
 
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
-}
+                            <strong>
+                                2025
+                            </strong>
 
+                        </div>
 
-/* Mobile Menu */
 
-.menu-button {
+                    </div>
 
-    display: none;
+                </div>
 
-    width: 42px;
-    height: 42px;
 
-    align-items: center;
-    justify-content: center;
 
-    flex-direction: column;
+                <!-- HERO IMAGE -->
 
-    gap: 5px;
+                <div class="hero-visual">
 
-    background: transparent;
 
-    border: 1px solid var(--border);
+                    <div class="hero-image-frame">
 
-    cursor: pointer;
-}
 
+                        <div class="image-corner top-left"></div>
 
-.menu-button span {
+                        <div class="image-corner top-right"></div>
 
-    display: block;
+                        <div class="image-corner bottom-left"></div>
 
-    width: 17px;
-    height: 1px;
+                        <div class="image-corner bottom-right"></div>
 
-    background: var(--text);
-}
 
+                        <img
+                            src="profile.jpg"
+                            alt="Jebon Kumar Sarker"
+                            class="hero-image"
+                        >
 
-/* =========================================================
-   HERO
-========================================================= */
 
-.hero-section {
+                        <div class="hero-image-overlay"></div>
 
-    position: relative;
 
-    min-height: 100vh;
+                        <div class="hero-image-label">
 
-    display: flex;
+                            <span>
+                                PROFILE
+                            </span>
 
-    align-items: center;
+                            <strong>
+                                杰本
+                            </strong>
 
-    padding: 150px 0 100px;
+                        </div>
 
-    overflow: hidden;
-}
 
+                    </div>
 
-/* Background Grid */
 
-.hero-grid {
+                    <div class="tech-label tech-label-one">
 
-    position: absolute;
+                        <span>01</span>
 
-    inset: 0;
+                        ENGINEERING
 
-    background-image:
-        linear-gradient(
-            rgba(255,255,255,0.025) 1px,
-            transparent 1px
-        ),
-        linear-gradient(
-            90deg,
-            rgba(255,255,255,0.025) 1px,
-            transparent 1px
-        );
+                    </div>
 
-    background-size: 70px 70px;
 
-    mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent 90%
-    );
+                    <div class="tech-label tech-label-two">
 
-    pointer-events: none;
-}
+                        <span>02</span>
 
+                        BUSINESS
 
-/* Ambient Glow */
+                    </div>
 
-.hero-section::before {
 
-    content: "";
+                    <div class="tech-label tech-label-three">
 
-    position: absolute;
+                        <span>03</span>
 
-    width: 600px;
-    height: 600px;
+                        COMMUNICATION
 
-    top: 5%;
-    right: -250px;
+                    </div>
 
-    background: rgba(0, 200, 255, 0.07);
 
-    border-radius: 50%;
+                    <div class="hero-orbit"></div>
 
-    filter: blur(100px);
 
-    pointer-events: none;
-}
+                </div>
 
+            </div>
 
-.hero-container {
 
-    position: relative;
+            <a
+                href="#about"
+                class="scroll-indicator"
+            >
 
-    display: grid;
+                <span>
+                    SCROLL TO EXPLORE
+                </span>
 
-    grid-template-columns: 1.1fr 0.9fr;
+                <div class="scroll-line"></div>
 
-    gap: 80px;
+            </a>
 
-    align-items: center;
-}
+        </section>
 
 
-/* Hero Content */
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
+        <!-- =========================
+             ABOUT
+        ========================== -->
 
+        <section id="about" class="about-section section">
 
-.hero-label {
+            <div class="container">
 
-    display: inline-flex;
 
-    align-items: center;
+                <div class="section-heading">
 
-    gap: 10px;
+                    <span class="section-number">
+                        01
+                    </span>
 
-    margin-bottom: 28px;
 
-    color: var(--text-muted);
+                    <div>
 
-    font-size: 0.68rem;
+                        <span class="section-label">
+                            ABOUT ME
+                        </span>
 
-    font-weight: 600;
+                        <h2>
 
-    letter-spacing: 0.13em;
+                            Bridging Engineering,
 
-    text-transform: uppercase;
-}
+                            <br>
 
+                            <span>
+                                Business & Communication
+                            </span>
 
-.status-dot {
+                        </h2>
 
-    width: 7px;
-    height: 7px;
+                    </div>
 
-    border-radius: 50%;
+                </div>
 
-    background: var(--accent);
 
-    box-shadow:
-        0 0 0 5px rgba(0, 200, 255, 0.08),
-        0 0 18px rgba(0, 200, 255, 0.5);
-}
 
+                <div class="about-intro">
 
-/* Hero Title */
+                    <div class="about-intro-line"></div>
 
-.hero-title {
 
-    font-family: var(--font-heading);
+                    <div class="about-intro-content">
 
-    font-size: clamp(
-        4rem,
-        8vw,
-        7.7rem
-    );
 
-    line-height: 0.88;
+                        <p class="about-lead">
 
-    letter-spacing: -0.075em;
+                            I am a Mechanical Engineering graduate currently
+                            working with a Chinese building-material company
+                            in Bangladesh as a
+                            <strong>
+                                Chinese Interpreter and Management Assistant.
+                            </strong>
 
-    font-weight: 700;
+                        </p>
 
-    margin-bottom: 30px;
-}
 
+                        <p>
 
-.hero-title span {
+                            In my current position, I work closely with the
+                            Chinese owner and management and serve as a key
+                            communication bridge between Chinese management
+                            and the Bangladeshi team.
 
-    display: block;
+                        </p>
 
-    color: transparent;
 
-    -webkit-text-stroke: 1px rgba(255,255,255,0.38);
+                        <p>
 
-    text-stroke: 1px rgba(255,255,255,0.38);
-}
+                            My responsibilities extend beyond interpretation.
+                            I am involved in
+                            <strong>
+                                business, administration, client communication,
+                                operational coordination
+                            </strong>
+                            and various activities required to support the
+                            company's operations in Bangladesh.
 
+                        </p>
 
-/* Subtitle */
 
-.hero-subtitle {
+                        <p>
 
-    max-width: 720px;
+                            At the same time, I apply my previous experience
+                            and knowledge in
+                            <strong>
+                                Mechanical Engineering, technical operations,
+                                communication, web development, client handling
+                            </strong>
+                            and
+                            <strong>
+                                business development
+                            </strong>
+                            to solve practical problems and coordinate work
+                            across different areas.
 
-    margin-bottom: 25px;
+                        </p>
 
-    color: var(--accent);
 
-    font-size: 0.9rem;
+                        <p>
 
-    font-weight: 600;
+                            Working in a multinational environment has allowed
+                            me to combine technical understanding with
+                            communication, management and commercial experience.
+                            My professional direction continues to develop at
+                            the intersection of
+                            <strong>
+                                engineering, technology, business and
+                                international collaboration.
+                            </strong>
 
-    letter-spacing: 0.04em;
-}
+                        </p>
 
 
-.hero-description {
+                    </div>
 
-    max-width: 680px;
+                </div>
 
-    color: var(--text-soft);
 
-    font-size: 0.98rem;
 
-    line-height: 1.85;
+                <!-- PROFESSIONAL PROFILE -->
 
-    margin-bottom: 38px;
-}
+                <div class="profile-section">
 
 
-/* Hero Buttons */
+                    <div class="profile-title-row">
 
-.hero-buttons {
+                        <div>
 
-    display: flex;
+                            <span class="mini-label">
+                                PROFESSIONAL PROFILE
+                            </span>
 
-    align-items: center;
+                            <h3>
+                                Who I Am
+                            </h3>
 
-    gap: 12px;
+                        </div>
 
-    margin-bottom: 55px;
-}
 
+                        <span class="profile-symbol">
+                            杰
+                        </span>
 
-.btn {
+                    </div>
 
-    display: inline-flex;
 
-    align-items: center;
 
-    justify-content: center;
+                    <div class="profile-card">
 
-    gap: 16px;
 
-    min-height: 52px;
+                        <div class="profile-main">
 
-    padding: 0 22px;
 
-    font-size: 0.76rem;
+                            <div class="profile-avatar">
+                                杰
+                            </div>
 
-    font-weight: 700;
 
-    letter-spacing: 0.04em;
+                            <div class="profile-name">
 
-    transition:
-        transform var(--transition),
-        background var(--transition),
-        border-color var(--transition),
-        color var(--transition);
-}
+                                <h3>
+                                    Jebon Kumar Sarker
+                                </h3>
 
+                                <p>
+                                    Management Assistant · Chinese Interpreter
+                                </p>
 
-.btn span {
-    font-size: 1rem;
-}
+                            </div>
 
 
-.btn-primary {
+                        </div>
 
-    background: var(--accent);
 
-    color: #001018;
 
-    border: 1px solid var(--accent);
-}
+                        <div class="profile-details">
 
 
-.btn-primary:hover {
+                            <div class="profile-detail">
 
-    transform: translateY(-3px);
+                                <span>
+                                    EDUCATION
+                                </span>
 
-    background: #42d6ff;
-}
+                                <strong>
+                                    Mechanical Engineering
+                                </strong>
 
+                            </div>
 
-.btn-secondary {
 
-    background: rgba(255,255,255,0.025);
+                            <div class="profile-detail">
 
-    border: 1px solid var(--border-light);
+                                <span>
+                                    CURRENT FOCUS
+                                </span>
 
-    color: var(--text);
-}
+                                <strong>
+                                    Business & Administration
+                                </strong>
 
+                            </div>
 
-.btn-secondary:hover {
 
-    transform: translateY(-3px);
+                            <div class="profile-detail">
 
-    border-color: rgba(0,200,255,0.4);
+                                <span>
+                                    COMMUNICATION
+                                </span>
 
-    color: var(--accent);
-}
+                                <strong>
+                                    Chinese · Bangla · English
+                                </strong>
 
+                            </div>
 
-/* Hero Meta */
 
-.hero-meta {
+                            <div class="profile-detail">
 
-    display: flex;
+                                <span>
+                                    TECHNICAL FOUNDATION
+                                </span>
 
-    flex-wrap: wrap;
+                                <strong>
+                                    Mechanical & Manufacturing
+                                </strong>
 
-    gap: 40px;
+                            </div>
 
-    padding-top: 28px;
 
-    border-top: 1px solid var(--border);
-}
+                            <div class="profile-detail">
 
+                                <span>
+                                    WORK ENVIRONMENT
+                                </span>
 
-.hero-meta-item {
+                                <strong>
+                                    Multinational Operations
+                                </strong>
 
-    display: flex;
+                            </div>
 
-    flex-direction: column;
 
-    gap: 6px;
-}
+                        </div>
 
+                    </div>
 
-.hero-meta-item span {
+                </div>
 
-    color: var(--text-muted);
 
-    font-size: 0.6rem;
 
-    font-weight: 700;
+                <!-- WHAT I DO -->
 
-    letter-spacing: 0.16em;
-}
+                <div class="what-i-do">
 
 
-.hero-meta-item strong {
+                    <div class="what-header">
 
-    color: var(--text-soft);
 
-    font-size: 0.78rem;
+                        <div>
 
-    font-weight: 500;
-}
+                            <span class="mini-label">
+                                WHAT I DO
+                            </span>
 
+                            <h3>
 
-/* =========================================================
-   HERO VISUAL
-========================================================= */
+                                More Than Interpretation.
 
-.hero-visual {
+                                <span>
+                                    More Than Engineering.
+                                </span>
 
-    position: relative;
+                            </h3>
 
-    min-height: 600px;
+                        </div>
 
-    display: flex;
 
-    align-items: center;
+                        <p>
 
-    justify-content: center;
-}
+                            Combining technical knowledge, communication,
+                            business and management capabilities in a
+                            multinational environment.
 
+                        </p>
 
-.hero-image-frame {
+                    </div>
 
-    position: relative;
 
-    width: min(430px, 100%);
 
-    aspect-ratio: 0.78;
+                    <div class="expertise-grid">
 
-    padding: 12px;
 
-    border: 1px solid rgba(255,255,255,0.13);
+                        <div class="expertise-card">
 
-    background: rgba(255,255,255,0.025);
+                            <div class="expertise-top">
 
-    transform: rotate(2deg);
-}
+                                <span class="expertise-number">
+                                    01
+                                </span>
 
+                                <span class="expertise-icon">
+                                    ↗
+                                </span>
 
-.hero-image-frame::before {
+                            </div>
 
-    content: "";
 
-    position: absolute;
+                            <div class="expertise-content">
 
-    inset: 25px;
+                                <h4>
+                                    Management & Administration
+                                </h4>
 
-    border: 1px solid rgba(0,200,255,0.15);
+                                <p>
 
-    pointer-events: none;
-}
+                                    Supporting Chinese management with business,
+                                    administrative and operational coordination
+                                    across the Bangladesh operation.
 
+                                </p>
 
-.hero-image {
+                            </div>
 
-    width: 100%;
-    height: 100%;
 
-    object-fit: cover;
+                            <div class="card-line"></div>
 
-    object-position: center;
+                        </div>
 
-    filter: saturate(0.85) contrast(1.05);
-}
 
 
-.hero-image-overlay {
+                        <div class="expertise-card">
 
-    position: absolute;
+                            <div class="expertise-top">
 
-    inset: 12px;
+                                <span class="expertise-number">
+                                    02
+                                </span>
 
-    background:
-        linear-gradient(
-            to bottom,
-            transparent 55%,
-            rgba(7,11,18,0.72)
-        );
-}
+                                <span class="expertise-icon">
+                                    ⇄
+                                </span>
 
+                            </div>
 
-/* Corner Marks */
 
-.image-corner {
+                            <div class="expertise-content">
 
-    position: absolute;
+                                <h4>
+                                    Chinese–Bangla Communication
+                                </h4>
 
-    width: 22px;
-    height: 22px;
+                                <p>
 
-    border-color: var(--accent);
+                                    Connecting Chinese management with
+                                    employees, clients, suppliers and
+                                    local stakeholders.
 
-    z-index: 3;
-}
+                                </p>
 
+                            </div>
 
-.top-left {
 
-    top: -5px;
-    left: -5px;
+                            <div class="card-line"></div>
 
-    border-top: 1px solid;
-    border-left: 1px solid;
-}
+                        </div>
 
 
-.top-right {
 
-    top: -5px;
-    right: -5px;
+                        <div class="expertise-card">
 
-    border-top: 1px solid;
-    border-right: 1px solid;
-}
+                            <div class="expertise-top">
 
+                                <span class="expertise-number">
+                                    03
+                                </span>
 
-.bottom-left {
+                                <span class="expertise-icon">
+                                    ⌁
+                                </span>
 
-    bottom: -5px;
-    left: -5px;
+                            </div>
 
-    border-bottom: 1px solid;
-    border-left: 1px solid;
-}
 
+                            <div class="expertise-content">
 
-.bottom-right {
+                                <h4>
+                                    Business & Client Relations
+                                </h4>
 
-    bottom: -5px;
-    right: -5px;
+                                <p>
 
-    border-bottom: 1px solid;
-    border-right: 1px solid;
-}
+                                    Handling client communication, business
+                                    development, corporate coordination,
+                                    follow-ups and deal-related activities.
 
+                                </p>
 
-/* Image Label */
+                            </div>
 
-.hero-image-label {
 
-    position: absolute;
+                            <div class="card-line"></div>
 
-    left: 35px;
-    bottom: 30px;
+                        </div>
 
-    z-index: 4;
 
-    display: flex;
 
-    align-items: center;
+                        <div class="expertise-card">
 
-    gap: 15px;
-}
+                            <div class="expertise-top">
 
+                                <span class="expertise-number">
+                                    04
+                                </span>
 
-.hero-image-label span {
+                                <span class="expertise-icon">
+                                    ⚙
+                                </span>
 
-    color: rgba(255,255,255,0.45);
+                            </div>
 
-    font-size: 0.58rem;
 
-    font-weight: 700;
+                            <div class="expertise-content">
 
-    letter-spacing: 0.15em;
-}
+                                <h4>
+                                    Technical & Engineering Support
+                                </h4>
 
+                                <p>
 
-.hero-image-label strong {
+                                    Applying mechanical and technical knowledge
+                                    to understand manufacturing, machinery and
+                                    operational requirements.
 
-    color: var(--accent);
+                                </p>
 
-    font-family: var(--font-heading);
+                            </div>
 
-    font-size: 1.5rem;
 
-    font-weight: 500;
-}
+                            <div class="card-line"></div>
 
+                        </div>
 
-/* Floating Labels */
 
-.tech-label {
+                    </div>
 
-    position: absolute;
+                </div>
 
-    z-index: 5;
 
-    padding: 9px 12px;
 
-    background: rgba(7,11,18,0.82);
+                <!-- CAPABILITIES -->
 
-    border: 1px solid var(--border);
+                <div class="capabilities">
 
-    backdrop-filter: blur(10px);
 
-    color: var(--text-muted);
+                    <span class="capability-title">
+                        CORE CAPABILITIES
+                    </span>
 
-    font-size: 0.57rem;
 
-    font-weight: 700;
+                    <div class="capability-list">
 
-    letter-spacing: 0.12em;
-}
+                        <span>
+                            Mechanical Engineering
+                        </span>
 
+                        <span>
+                            Manufacturing
+                        </span>
 
-.tech-label span {
+                        <span>
+                            Automation
+                        </span>
 
-    color: var(--accent);
+                        <span>
+                            Business Development
+                        </span>
 
-    margin-right: 7px;
-}
+                        <span>
+                            Chinese Communication
+                        </span>
 
+                        <span>
+                            Administration
+                        </span>
 
-.tech-label-one {
+                        <span>
+                            Client Management
+                        </span>
 
-    top: 15%;
+                        <span>
+                            Technical Coordination
+                        </span>
 
-    left: -15px;
-}
+                        <span>
+                            Web Development
+                        </span>
 
+                        <span>
+                            Corporate Communication
+                        </span>
 
-.tech-label-two {
+                        <span>
+                            Multinational Operations
+                        </span>
 
-    top: 48%;
+                    </div>
 
-    right: -20px;
-}
+                </div>
 
+            </div>
 
-.tech-label-three {
+        </section>
 
-    bottom: 16%;
 
-    left: -35px;
-}
 
+        <!-- =========================
+             EDUCATION
+        ========================== -->
 
-/* Orbit */
+        <section id="education" class="placeholder-section section">
 
-.hero-orbit {
+            <div class="container">
 
-    position: absolute;
+                <span class="section-number">
+                    02
+                </span>
 
-    width: 540px;
-    height: 540px;
+                <span class="section-label">
+                    EDUCATION
+                </span>
 
-    border: 1px solid rgba(0,200,255,0.08);
+                <h2>
+                    Education & Academic Journey
+                </h2>
 
-    border-radius: 50%;
+                <p>
+                    My academic background combines Mechanical Engineering,
+                    manufacturing, automation and practical industrial exposure.
+                </p>
 
-    pointer-events: none;
-}
+            </div>
 
+        </section>
 
-/* Scroll Indicator */
 
-.scroll-indicator {
 
-    position: absolute;
+        <!-- =========================
+             EXPERIENCE
+        ========================== -->
 
-    left: 40px;
-    bottom: 35px;
+        <section id="experience" class="placeholder-section section">
 
-    display: flex;
+            <div class="container">
 
-    align-items: center;
+                <span class="section-number">
+                    03
+                </span>
 
-    gap: 15px;
+                <span class="section-label">
+                    EXPERIENCE
+                </span>
 
-    color: var(--text-muted);
+                <h2>
+                    Professional Experience
+                </h2>
 
-    font-size: 0.58rem;
+                <p>
+                    Experience in multinational communication, management,
+                    administration, business development and technical
+                    coordination.
+                </p>
 
-    font-weight: 700;
+            </div>
 
-    letter-spacing: 0.15em;
-}
+        </section>
 
 
-.scroll-line {
 
-    width: 45px;
-    height: 1px;
+        <!-- =========================
+             SKILLS
+        ========================== -->
 
-    background: var(--border-light);
-}
+        <section id="skills" class="placeholder-section section">
 
+            <div class="container">
 
-/* =========================================================
-   ABOUT
-========================================================= */
+                <span class="section-number">
+                    04
+                </span>
 
-.about-section {
+                <span class="section-label">
+                    SKILLS
+                </span>
 
-    position: relative;
+                <h2>
+                    Skills & Expertise
+                </h2>
 
-    padding: 140px 0;
+                <p>
+                    Mechanical engineering, Chinese communication, business,
+                    administration, technical coordination and web development.
+                </p>
 
-    overflow: hidden;
-}
+            </div>
 
+        </section>
 
-/* Section Heading */
 
-.section-heading {
 
-    display: grid;
+        <!-- =========================
+             PROJECTS
+        ========================== -->
 
-    grid-template-columns: 90px 1fr;
+        <section id="projects" class="placeholder-section section">
 
-    gap: 30px;
+            <div class="container">
 
-    align-items: start;
+                <span class="section-number">
+                    05
+                </span>
 
-    margin-bottom: 85px;
-}
+                <span class="section-label">
+                    PROJECTS
+                </span>
 
+                <h2>
+                    Selected Projects
+                </h2>
 
-.section-number {
+                <p>
+                    Selected engineering, business, manufacturing, web
+                    development and professional projects will be presented here.
+                </p>
 
-    display: block;
+            </div>
 
-    padding-top: 9px;
+        </section>
 
-    color: var(--accent);
 
-    font-size: 0.68rem;
 
-    font-weight: 700;
+        <!-- =========================
+             CONTACT
+        ========================== -->
 
-    letter-spacing: 0.18em;
-}
+        <section id="contact" class="placeholder-section section">
 
+            <div class="container">
 
-.section-label,
-.mini-label {
+                <span class="section-number">
+                    06
+                </span>
 
-    display: block;
+                <span class="section-label">
+                    CONTACT
+                </span>
 
-    margin-bottom: 18px;
+                <h2>
+                    Let's Connect
+                </h2>
 
-    color: var(--accent);
+                <p>
+                    Contact information and professional social links will
+                    be added here.
+                </p>
 
-    font-size: 0.68rem;
+            </div>
 
-    font-weight: 700;
+        </section>
 
-    letter-spacing: 0.2em;
-}
 
+    </main>
 
-.section-heading h2 {
 
-    margin: 0;
 
-    max-width: 900px;
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-    font-family: var(--font-heading);
+    <footer class="site-footer">
 
-    font-size: clamp(
-        2.8rem,
-        5vw,
-        5.2rem
-    );
+        <div class="container footer-container">
 
-    line-height: 1.02;
 
-    letter-spacing: -0.055em;
+            <div class="footer-left">
 
-    font-weight: 700;
-}
+                <span class="footer-logo">
+                    Jebon<span>.</span>
+                </span>
 
+                <p>
+                    Engineering · Business · Communication
+                </p>
 
-.section-heading h2 span {
+            </div>
 
-    color: rgba(255,255,255,0.32);
-}
 
+            <div class="footer-right">
 
-/* About Intro */
+                <p>
+                    © 2026 Jebon Kumar Sarker.
+                    All rights reserved.
+                </p>
 
-.about-intro {
+            </div>
 
-    display: grid;
 
-    grid-template-columns: 5px 1fr;
+        </div>
 
-    gap: 35px;
+    </footer>
 
-    max-width: 1050px;
 
-    margin-left: 120px;
 
-    margin-bottom: 120px;
-}
+    <script src="script.js"></script>
 
+</body>
 
-.about-intro-line {
-
-    width: 1px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            var(--accent),
-            rgba(0,200,255,0)
-        );
-}
-
-
-.about-intro-content {
-
-    max-width: 900px;
-}
-
-
-.about-intro-content p {
-
-    margin: 0 0 24px;
-
-    color: var(--text-soft);
-
-    font-size: 1rem;
-
-    line-height: 1.9;
-}
-
-
-.about-intro-content p:last-child {
-    margin-bottom: 0;
-}
-
-
-.about-intro-content .about-lead {
-
-    margin-bottom: 35px;
-
-    color: rgba(255,255,255,0.93);
-
-    font-size: 1.4rem;
-
-    line-height: 1.65;
-
-    letter-spacing: -0.015em;
-}
-
-
-.about-intro-content strong {
-
-    color: rgba(255,255,255,0.94);
-
-    font-weight: 600;
-}
-
-
-/* =========================================================
-   PROFESSIONAL PROFILE
-========================================================= */
-
-.profile-section {
-
-    margin-bottom: 125px;
-}
-
-
-.profile-title-row {
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: space-between;
-
-    margin-bottom: 28px;
-}
-
-
-.profile-title-row h3,
-.what-header h3 {
-
-    margin: 0;
-
-    font-family: var(--font-heading);
-
-    font-size: 2rem;
-
-    letter-spacing: -0.035em;
-}
-
-
-.profile-symbol {
-
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid var(--border);
-
-    background: rgba(255,255,255,0.025);
-
-    color: var(--accent);
-
-    font-size: 1.45rem;
-
-    font-weight: 600;
-}
-
-
-/* Profile Card */
-
-.profile-card {
-
-    display: grid;
-
-    grid-template-columns: 1fr 1.5fr;
-
-    border: 1px solid var(--border);
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,0.045),
-            rgba(255,255,255,0.012)
-        );
-
-    backdrop-filter: blur(12px);
-
-    -webkit-backdrop-filter: blur(12px);
-}
-
-
-.profile-main {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-
-    padding: 45px;
-
-    border-right: 1px solid var(--border);
-}
-
-
-.profile-avatar {
-
-    flex-shrink: 0;
-
-    width: 76px;
-    height: 76px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid rgba(0,200,255,0.35);
-
-    background: rgba(0,200,255,0.05);
-
-    color: var(--accent);
-
-    font-size: 2rem;
-
-    font-weight: 600;
-}
-
-
-.profile-name h3 {
-
-    margin-bottom: 8px;
-
-    font-family: var(--font-heading);
-
-    font-size: 1.35rem;
-}
-
-
-.profile-name p {
-
-    margin: 0;
-
-    color: var(--text-muted);
-
-    font-size: 0.82rem;
-}
-
-
-/* Profile Details */
-
-.profile-details {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-}
-
-
-.profile-detail {
-
-    padding: 27px 32px;
-
-    border-bottom: 1px solid var(--border);
-}
-
-
-.profile-detail:nth-child(odd) {
-
-    border-right: 1px solid var(--border);
-}
-
-
-.profile-detail:last-child {
-
-    grid-column: span 2;
-}
-
-
-.profile-detail span {
-
-    display: block;
-
-    margin-bottom: 9px;
-
-    color: var(--text-muted);
-
-    font-size: 0.6rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.16em;
-}
-
-
-.profile-detail strong {
-
-    color: var(--text-soft);
-
-    font-size: 0.92rem;
-
-    font-weight: 500;
-}
-
-
-/* =========================================================
-   WHAT I DO
-========================================================= */
-
-.what-i-do {
-
-    margin-bottom: 90px;
-}
-
-
-.what-header {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: flex-end;
-
-    gap: 60px;
-
-    margin-bottom: 45px;
-}
-
-
-.what-header h3 {
-
-    max-width: 650px;
-
-    font-size: clamp(
-        2rem,
-        3.5vw,
-        3.3rem
-    );
-
-    line-height: 1.1;
-}
-
-
-.what-header h3 span {
-
-    display: block;
-
-    color: rgba(255,255,255,0.32);
-}
-
-
-.what-header > p {
-
-    max-width: 360px;
-
-    margin: 0;
-
-    color: var(--text-muted);
-
-    font-size: 0.88rem;
-
-    line-height: 1.7;
-}
-
-
-/* Expertise Grid */
-
-.expertise-grid {
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 18px;
-}
-
-
-.expertise-card {
-
-    position: relative;
-
-    min-height: 280px;
-
-    padding: 35px;
-
-    border: 1px solid var(--border);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.045),
-            rgba(255,255,255,0.012)
-        );
-
-    overflow: hidden;
-
-    transition:
-        transform 0.35s ease,
-        border-color 0.35s ease,
-        background 0.35s ease;
-}
-
-
-.expertise-card::before {
-
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--accent);
-
-    transition: width 0.4s ease;
-}
-
-
-.expertise-card:hover {
-
-    transform: translateY(-6px);
-
-    border-color: rgba(0,200,255,0.25);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(0,200,255,0.06),
-            rgba(255,255,255,0.015)
-        );
-}
-
-
-.expertise-card:hover::before {
-    width: 100%;
-}
-
-
-.expertise-top {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-bottom: 55px;
-}
-
-
-.expertise-number {
-
-    color: var(--accent);
-
-    font-size: 0.65rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.15em;
-}
-
-
-.expertise-icon {
-
-    width: 38px;
-    height: 38px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border: 1px solid var(--border);
-
-    color: var(--text-muted);
-
-    font-size: 1rem;
-
-    transition:
-        color var(--transition),
-        border-color var(--transition);
-}
-
-
-.expertise-card:hover .expertise-icon {
-
-    color: var(--accent);
-
-    border-color: rgba(0,200,255,0.3);
-}
-
-
-.expertise-content h4 {
-
-    margin-bottom: 14px;
-
-    font-family: var(--font-heading);
-
-    font-size: 1.22rem;
-
-    line-height: 1.3;
-
-    letter-spacing: -0.025em;
-}
-
-
-.expertise-content p {
-
-    max-width: 520px;
-
-    color: var(--text-muted);
-
-    font-size: 0.87rem;
-
-    line-height: 1.75;
-}
-
-
-.card-line {
-
-    position: absolute;
-
-    right: 35px;
-    bottom: 35px;
-
-    width: 45px;
-    height: 1px;
-
-    background: rgba(255,255,255,0.12);
-
-    transition:
-        width 0.35s ease,
-        background 0.35s ease;
-}
-
-
-.expertise-card:hover .card-line {
-
-    width: 80px;
-
-    background: var(--accent);
-}
-
-
-/* =========================================================
-   CAPABILITIES
-========================================================= */
-
-.capabilities {
-
-    padding-top: 40px;
-
-    border-top: 1px solid var(--border);
-}
-
-
-.capability-title {
-
-    display: block;
-
-    margin-bottom: 25px;
-
-    color: var(--text-muted);
-
-    font-size: 0.64rem;
-
-    font-weight: 700;
-
-    letter-spacing: 0.18em;
-}
-
-
-.capability-list {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 9px;
-}
-
-
-.capability-list span {
-
-    padding: 10px 15px;
-
-    border: 1px solid var(--border);
-
-    background: rgba(255,255,255,0.025);
-
-    color: var(--text-muted);
-
-    font-size: 0.72rem;
-
-    transition:
-        color var(--transition),
-        border-color var(--transition),
-        background var(--transition);
-}
-
-
-.capability-list span:hover {
-
-    color: var(--accent);
-
-    border-color: rgba(0,200,255,0.3);
-
-    background: rgba(0,200,255,0.045);
-}
-
-
-/* =========================================================
-   PLACEHOLDER SECTIONS
-========================================================= */
-
-.placeholder-section {
-
-    min-height: 70vh;
-
-    display: flex;
-
-    align-items: center;
-
-    padding: 120px 0;
-
-    border-top: 1px solid var(--border);
-
-    background: var(--bg-soft);
-}
-
-
-.placeholder-section:nth-child(even) {
-    background: var(--bg);
-}
-
-
-.placeholder-section h2 {
-
-    margin: 10px 0 20px;
-
-    font-family: var(--font-heading);
-
-    font-size: clamp(
-        2.5rem,
-        5vw,
-        5rem
-    );
-
-    line-height: 1;
-
-    letter-spacing: -0.055em;
-}
-
-
-.placeholder-section p {
-
-    max-width: 600px;
-
-    color: var(--text-muted);
-
-    font-size: 0.95rem;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.site-footer {
-
-    border-top: 1px solid var(--border);
-
-    padding: 35px 0;
-
-    background: #05080d;
-}
-
-
-.footer-container {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 30px;
-}
-
-
-.footer-left {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 25px;
-}
-
-
-.footer-logo {
-
-    font-family: var(--font-heading);
-
-    font-size: 1.1rem;
-
-    font-weight: 700;
-}
-
-
-.footer-left p {
-
-    color: var(--text-muted);
-
-    font-size: 0.68rem;
-}
-
-
-.footer-right p {
-
-    color: var(--text-muted);
-
-    font-size: 0.65rem;
-}
-
-
-/* =========================================================
-   RESPONSIVE — TABLET
-========================================================= */
-
-@media (max-width: 1050px) {
-
-    .container {
-        width: min(
-            calc(100% - 50px),
-            var(--container)
-        );
-    }
-
-
-    .main-nav {
-        gap: 22px;
-    }
-
-
-    .hero-container {
-
-        grid-template-columns: 1fr 0.75fr;
-
-        gap: 40px;
-    }
-
-
-    .hero-title {
-
-        font-size: clamp(
-            3.5rem,
-            8vw,
-            6rem
-        );
-    }
-
-
-    .hero-visual {
-        min-height: 500px;
-    }
-
-
-    .hero-image-frame {
-        width: 360px;
-    }
-
-
-    .about-intro {
-        margin-left: 60px;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — 900px
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .header-container {
-        height: 72px;
-    }
-
-
-    .main-nav {
-
-        position: fixed;
-
-        top: 72px;
-        left: 0;
-
-        width: 100%;
-
-        padding: 25px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 20px;
-
-        background: rgba(7,11,18,0.97);
-
-        border-bottom: 1px solid var(--border);
-
-        transform: translateY(-20px);
-
-        opacity: 0;
-
-        visibility: hidden;
-
-        transition:
-            opacity var(--transition),
-            transform var(--transition),
-            visibility var(--transition);
-    }
-
-
-    .main-nav.open {
-
-        transform: translateY(0);
-
-        opacity: 1;
-
-        visibility: visible;
-    }
-
-
-    .nav-link {
-        font-size: 0.78rem;
-    }
-
-
-    .menu-button {
-        display: flex;
-    }
-
-
-    .hero-section {
-        padding-top: 130px;
-    }
-
-
-    .hero-container {
-
-        grid-template-columns: 1fr;
-
-        gap: 70px;
-    }
-
-
-    .hero-content {
-        max-width: 850px;
-    }
-
-
-    .hero-visual {
-        min-height: 520px;
-    }
-
-
-    .hero-image-frame {
-        width: min(400px, 80vw);
-    }
-
-
-    .tech-label-one {
-        left: 5%;
-    }
-
-
-    .tech-label-two {
-        right: 4%;
-    }
-
-
-    .tech-label-three {
-        left: 5%;
-    }
-
-
-    .scroll-indicator {
-        display: none;
-    }
-
-
-    .section-heading {
-
-        grid-template-columns: 55px 1fr;
-
-        gap: 20px;
-
-        margin-bottom: 60px;
-    }
-
-
-    .about-intro {
-
-        margin-left: 0;
-
-        max-width: 900px;
-    }
-
-
-    .profile-card {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .profile-main {
-
-        border-right: none;
-
-        border-bottom: 1px solid var(--border);
-    }
-
-
-    .what-header {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 25px;
-    }
-
-}
-
-
-/* =========================================================
-   RESPONSIVE — MOBILE
-========================================================= */
-
-@media (max-width: 650px) {
-
-    .container {
-
-        width: calc(100% - 36px);
-    }
-
-
-    /* Header */
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-
-    /* Hero */
-
-    .hero-section {
-
-        padding: 115px 0 70px;
-
-        min-height: auto;
-    }
-
-
-    .hero-label {
-
-        margin-bottom: 22px;
-
-        font-size: 0.58rem;
-
-        line-height: 1.5;
-    }
-
-
-    .hero-title {
-
-        font-size: clamp(
-            3.2rem,
-            16vw,
-            5rem
-        );
-
-        margin-bottom: 24px;
-    }
-
-
-    .hero-subtitle {
-
-        font-size: 0.76rem;
-
-        line-height: 1.7;
-    }
-
-
-    .hero-description {
-
-        font-size: 0.87rem;
-
-        line-height: 1.8;
-    }
-
-
-    .hero-buttons {
-
-        flex-direction: column;
-
-        align-items: stretch;
-
-        margin-bottom: 40px;
-    }
-
-
-    .btn {
-        width: 100%;
-    }
-
-
-    .hero-meta {
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 22px;
-    }
-
-
-    .hero-visual {
-
-        min-height: 420px;
-    }
-
-
-    .hero-image-frame {
-
-        width: min(
-            330px,
-            80vw
-        );
-    }
-
-
-    .hero-orbit {
-
-        width: 390px;
-        height: 390px;
-    }
-
-
-    .tech-label {
-
-        font-size: 0.48rem;
-
-        padding: 7px 9px;
-    }
-
-
-    .tech-label-one {
-        left: 0;
-    }
-
-
-    .tech-label-two {
-        right: 0;
-    }
-
-
-    .tech-label-three {
-        left: 0;
-    }
-
-
-    /* About */
-
-    .about-section {
-
-        padding: 90px 0;
-    }
-
-
-    .section-heading {
-
-        display: block;
-
-        margin-bottom: 55px;
-    }
-
-
-    .section-number {
-
-        margin-bottom: 15px;
-    }
-
-
-    .section-heading h2 {
-
-        font-size: 2.7rem;
-    }
-
-
-    .about-intro {
-
-        grid-template-columns: 3px 1fr;
-
-        gap: 20px;
-
-        margin-bottom: 80px;
-    }
-
-
-    .about-intro-content .about-lead {
-
-        font-size: 1.15rem;
-
-        line-height: 1.65;
-    }
-
-
-    .about-intro-content p {
-
-        font-size: 0.88rem;
-
-        line-height: 1.85;
-    }
-
-
-    /* Profile */
-
-    .profile-section {
-
-        margin-bottom: 85px;
-    }
-
-
-    .profile-title-row h3 {
-
-        font-size: 1.55rem;
-    }
-
-
-    .profile-symbol {
-
-        width: 48px;
-        height: 48px;
-
-        font-size: 1.2rem;
-    }
-
-
-    .profile-main {
-
-        padding: 28px;
-
-        align-items: flex-start;
-    }
-
-
-    .profile-avatar {
-
-        width: 58px;
-        height: 58px;
-
-        font-size: 1.5rem;
-    }
-
-
-    .profile-name h3 {
-
-        font-size: 1rem;
-    }
-
-
-    .profile-name p {
-
-        font-size: 0.72rem;
-
-        line-height: 1.5;
-    }
-
-
-    .profile-details {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .profile-detail,
-    .profile-detail:nth-child(odd) {
-
-        border-right: none;
-    }
-
-
-    .profile-detail:last-child {
-
-        grid-column: auto;
-    }
-
-
-    /* What I Do */
-
-    .what-header h3 {
-
-        font-size: 2rem;
-    }
-
-
-    .what-header > p {
-
-        font-size: 0.82rem;
-    }
-
-
-    .expertise-grid {
-
-        grid-template-columns: 1fr;
-    }
-
-
-    .expertise-card {
-
-        min-height: 250px;
-
-        padding: 28px;
-    }
-
-
-    .expertise-top {
-
-        margin-bottom: 45px;
-    }
-
-
-    .expertise-content h4 {
-
-        font-size: 1.1rem;
-    }
-
-
-    .expertise-content p {
-
-        font-size: 0.82rem;
-    }
-
-
-    /* Capabilities */
-
-    .capability-list span {
-
-        font-size: 0.65rem;
-
-        padding: 8px 11px;
-    }
-
-
-    /* Placeholder Sections */
-
-    .placeholder-section {
-
-        min-height: 55vh;
-
-        padding: 90px 0;
-    }
-
-
-    .placeholder-section h2 {
-
-        font-size: 2.8rem;
-    }
-
-
-    /* Footer */
-
-    .footer-container {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-
-    .footer-left {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 8px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 400px) {
-
-    .hero-title {
-        font-size: 3rem;
-    }
-
-
-    .hero-meta {
-        grid-template-columns: 1fr;
-    }
-
-
-    .hero-visual {
-        min-height: 360px;
-    }
-
-
-    .hero-image-frame {
-        width: 270px;
-    }
-
-
-    .tech-label {
-        display: none;
-    }
-
-
-    .section-heading h2 {
-        font-size: 2.35rem;
-    }
-
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
-
-    *,
-    *::before,
-    *::after {
-
-        animation-duration: 0.01ms !important;
-
-        animation-iteration-count: 1 !important;
-
-        transition-duration: 0.01ms !important;
-
-        scroll-behavior: auto !important;
-    }
-
-}
+</html>
