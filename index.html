@@ -27,14 +27,14 @@
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <!-- Main CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 
 <body>
 
 <!-- =====================================================
-     HEADER / NAVIGATION
+     HEADER
 ===================================================== -->
 
 <header class="header" id="header">
@@ -45,29 +45,41 @@
             Jebon<span>.</span>
         </a>
 
-
         <div class="nav-right">
 
-            <!-- Language -->
+            <!-- LANGUAGE -->
             <div class="language-selector">
 
-                <button class="language-btn" id="languageBtn">
+                <button class="language-btn"
+                        id="languageBtn"
+                        type="button">
+
                     <i class="fas fa-globe"></i>
-                    <span id="currentLanguage">EN</span>
+
+                    <span id="currentLanguage">
+                        EN
+                    </span>
+
                     <i class="fas fa-chevron-down"></i>
+
                 </button>
 
-                <div class="language-menu" id="languageMenu">
 
-                    <button data-lang="en">
+                <div class="language-menu"
+                     id="languageMenu">
+
+                    <button type="button"
+                            data-lang="en">
                         🇬🇧 English
                     </button>
 
-                    <button data-lang="zh">
+                    <button type="button"
+                            data-lang="zh">
                         🇨🇳 中文
                     </button>
 
-                    <button data-lang="bn">
+                    <button type="button"
+                            data-lang="bn">
                         🇧🇩 বাংলা
                     </button>
 
@@ -76,9 +88,10 @@
             </div>
 
 
-            <!-- Theme -->
+            <!-- THEME -->
             <button class="theme-toggle"
                     id="themeToggle"
+                    type="button"
                     aria-label="Toggle dark and light mode">
 
                 <i class="fas fa-moon"></i>
@@ -86,9 +99,10 @@
             </button>
 
 
-            <!-- Mobile Menu -->
+            <!-- MOBILE MENU -->
             <button class="menu-toggle"
                     id="menuToggle"
+                    type="button"
                     aria-label="Open menu">
 
                 <i class="fas fa-bars"></i>
@@ -98,40 +112,49 @@
         </div>
 
 
-        <ul class="nav-menu" id="navMenu">
+        <!-- NAVIGATION -->
+
+        <ul class="nav-menu"
+            id="navMenu">
 
             <li>
-                <a href="#home" data-i18n="nav_home">
+                <a href="#home"
+                   data-i18n="nav_home">
                     Home
                 </a>
             </li>
 
             <li>
-                <a href="#about" data-i18n="nav_about">
+                <a href="#about"
+                   data-i18n="nav_about">
                     About
                 </a>
             </li>
 
             <li>
-                <a href="#experience" data-i18n="nav_experience">
+                <a href="#experience"
+                   data-i18n="nav_experience">
                     Experience
                 </a>
             </li>
 
             <li>
-                <a href="#skills" data-i18n="nav_skills">
+                <a href="#skills"
+                   data-i18n="nav_skills">
                     Skills
                 </a>
             </li>
 
             <li>
-                <a href="#projects" data-i18n="nav_projects">
+                <a href="#projects"
+                   data-i18n="nav_projects">
                     Projects
                 </a>
             </li>
 
             <li>
-                <a href="#contact" data-i18n="nav_contact">
+                <a href="#contact"
+                   data-i18n="nav_contact">
                     Contact
                 </a>
             </li>
@@ -155,7 +178,8 @@
      HERO
 ===================================================== -->
 
-<section class="hero" id="home">
+<section class="hero"
+         id="home">
 
     <div class="hero-bg"></div>
 
@@ -182,9 +206,7 @@
 
                 <span class="hero-name"
                       data-i18n="hero_last_name">
-
                     Sarker
-
                 </span>
 
             </h1>
@@ -208,6 +230,8 @@
 
             </p>
 
+
+            <!-- BUTTONS -->
 
             <div class="hero-buttons">
 
@@ -235,7 +259,7 @@
             </div>
 
 
-            <!-- SOCIAL -->
+            <!-- SOCIAL LINKS -->
 
             <div class="social-links">
 
@@ -290,17 +314,20 @@
 
             <div class="profile-wrapper">
 
-                <!-- IMPORTANT:
-                     Keep profile.jpg inside /assets/
+                <!--
+                    IMPORTANT:
+                    profile.jpg is in the ROOT folder,
+                    beside index.html.
                 -->
 
-                <img src="assets/profile.jpg"
+                <img src="./profile.jpg?v=2"
                      alt="Jebon Kumar Sarker"
                      class="profile-image"
+                     loading="eager"
                      onerror="this.style.display='none'; document.getElementById('imageFallback').style.display='flex';">
 
 
-                <!-- Fallback if image cannot be found -->
+                <!-- FALLBACK -->
 
                 <div class="image-fallback"
                      id="imageFallback">
@@ -316,9 +343,13 @@
             </div>
 
 
+            <!-- EXPERIENCE BADGE -->
+
             <div class="experience-badge">
 
-                <strong>2025+</strong>
+                <strong>
+                    2025+
+                </strong>
 
                 <span data-i18n="professional_experience">
                     Professional Experience
@@ -327,9 +358,13 @@
             </div>
 
 
+            <!-- LANGUAGE BADGE -->
+
             <div class="language-badge">
 
-                <strong>中 · বাংলা · EN</strong>
+                <strong>
+                    中 · বাংলা · EN
+                </strong>
 
                 <span data-i18n="multilingual">
                     Multilingual Communication
@@ -349,7 +384,8 @@
      ABOUT
 ===================================================== -->
 
-<section class="section" id="about">
+<section class="section"
+         id="about">
 
     <div class="container">
 
@@ -357,24 +393,18 @@
 
             <p class="section-label"
                data-i18n="about_label">
-
                 ABOUT ME
-
             </p>
 
             <h2 data-i18n="about_title">
-
                 Engineering knowledge meets
                 business execution.
-
             </h2>
 
             <p data-i18n="about_intro">
-
                 I combine technical engineering knowledge with
                 communication, business development and operational
                 experience.
-
             </p>
 
         </div>
@@ -417,11 +447,13 @@
 
                 <div class="about-highlights">
 
+
                     <div class="highlight">
 
                         <i class="fas fa-gears"></i>
 
                         <div>
+
                             <strong data-i18n="highlight_engineering">
                                 Engineering
                             </strong>
@@ -429,6 +461,7 @@
                             <span data-i18n="highlight_engineering_text">
                                 Mechanical Design & Manufacturing
                             </span>
+
                         </div>
 
                     </div>
@@ -439,6 +472,7 @@
                         <i class="fas fa-language"></i>
 
                         <div>
+
                             <strong data-i18n="highlight_language">
                                 Communication
                             </strong>
@@ -446,6 +480,7 @@
                             <span data-i18n="highlight_language_text">
                                 Chinese • Bangla • English
                             </span>
+
                         </div>
 
                     </div>
@@ -456,6 +491,7 @@
                         <i class="fas fa-chart-line"></i>
 
                         <div>
+
                             <strong data-i18n="highlight_business">
                                 Business
                             </strong>
@@ -463,6 +499,7 @@
                             <span data-i18n="highlight_business_text">
                                 Sales & Business Development
                             </span>
+
                         </div>
 
                     </div>
@@ -473,6 +510,7 @@
                         <i class="fas fa-industry"></i>
 
                         <div>
+
                             <strong data-i18n="highlight_operations">
                                 Operations
                             </strong>
@@ -480,6 +518,7 @@
                             <span data-i18n="highlight_operations_text">
                                 Manufacturing & Management Support
                             </span>
+
                         </div>
 
                     </div>
@@ -488,6 +527,8 @@
 
             </div>
 
+
+            <!-- ABOUT CARD -->
 
             <div class="about-card">
 
@@ -500,6 +541,7 @@
                     <i class="fas fa-arrow-up-right-from-square"></i>
 
                 </div>
+
 
                 <h3 data-i18n="about_card_title">
                     Professional Focus
@@ -552,7 +594,8 @@
      EXPERIENCE
 ===================================================== -->
 
-<section class="section dark-section" id="experience">
+<section class="section dark-section"
+         id="experience">
 
     <div class="container">
 
@@ -560,9 +603,7 @@
 
             <p class="section-label"
                data-i18n="experience_label">
-
                 EXPERIENCE
-
             </p>
 
             <h2 data-i18n="experience_title">
@@ -570,10 +611,8 @@
             </h2>
 
             <p data-i18n="experience_intro">
-
                 Experience across engineering, manufacturing,
                 business development, communication and management.
-
             </p>
 
         </div>
@@ -592,9 +631,7 @@
 
                     <span class="timeline-date"
                           data-i18n="exp1_date">
-
                         2026 — Present
-
                     </span>
 
 
@@ -658,10 +695,8 @@
 
 
                     <h3 data-i18n="exp2_title">
-
                         Interpreter / HR & Administration /
                         Marketing
-
                     </h3>
 
 
@@ -804,7 +839,8 @@
      SKILLS
 ===================================================== -->
 
-<section class="section" id="skills">
+<section class="section"
+         id="skills">
 
     <div class="container">
 
@@ -812,9 +848,7 @@
 
             <p class="section-label"
                data-i18n="skills_label">
-
                 SKILLS
-
             </p>
 
             <h2 data-i18n="skills_title">
@@ -826,6 +860,8 @@
 
         <div class="skills-grid">
 
+
+            <!-- SKILL 1 -->
 
             <div class="skill-card">
 
@@ -840,15 +876,15 @@
                 </h3>
 
                 <p data-i18n="skill1_text">
-
                     Mechanical design, manufacturing,
                     automation and engineering fundamentals.
-
                 </p>
 
             </div>
 
 
+
+            <!-- SKILL 2 -->
 
             <div class="skill-card">
 
@@ -863,15 +899,15 @@
                 </h3>
 
                 <p data-i18n="skill2_text">
-
                     Chinese-Bangla-English interpretation,
                     business communication and coordination.
-
                 </p>
 
             </div>
 
 
+
+            <!-- SKILL 3 -->
 
             <div class="skill-card">
 
@@ -886,15 +922,15 @@
                 </h3>
 
                 <p data-i18n="skill3_text">
-
                     Lead generation, client communication,
                     sales follow-up and business relationships.
-
                 </p>
 
             </div>
 
 
+
+            <!-- SKILL 4 -->
 
             <div class="skill-card">
 
@@ -909,15 +945,15 @@
                 </h3>
 
                 <p data-i18n="skill4_text">
-
                     Production reporting, factory coordination,
                     inventory and operational follow-up.
-
                 </p>
 
             </div>
 
 
+
+            <!-- SKILL 5 -->
 
             <div class="skill-card">
 
@@ -932,15 +968,15 @@
                 </h3>
 
                 <p data-i18n="skill5_text">
-
                     Documentation, reporting, coordination,
                     communication and administrative support.
-
                 </p>
 
             </div>
 
 
+
+            <!-- SKILL 6 -->
 
             <div class="skill-card">
 
@@ -955,10 +991,8 @@
                 </h3>
 
                 <p data-i18n="skill6_text">
-
                     HTML, CSS, JavaScript, websites,
                     digital content and online business presence.
-
                 </p>
 
             </div>
@@ -975,7 +1009,8 @@
      PROJECTS
 ===================================================== -->
 
-<section class="section dark-section" id="projects">
+<section class="section dark-section"
+         id="projects">
 
     <div class="container">
 
@@ -983,9 +1018,7 @@
 
             <p class="section-label"
                data-i18n="projects_label">
-
                 PROJECTS
-
             </p>
 
             <h2 data-i18n="projects_title">
@@ -993,10 +1026,8 @@
             </h2>
 
             <p data-i18n="projects_intro">
-
                 A selection of engineering, manufacturing,
                 business and digital work.
-
             </p>
 
         </div>
@@ -1011,8 +1042,9 @@
 
                 <div class="project-image">
 
-                    <img src="assets/projects/project-1.jpg"
+                    <img src="./assets/projects/project-1.jpg"
                          alt="Mechanical Engineering Project"
+                         loading="lazy"
                          onerror="this.parentElement.classList.add('no-image');">
 
                     <div class="project-image-fallback">
@@ -1026,24 +1058,18 @@
 
                     <span class="project-category"
                           data-i18n="project1_category">
-
                         ENGINEERING
-
                     </span>
 
 
                     <h3 data-i18n="project1_title">
-
                         Mechanical Engineering Thesis
-
                     </h3>
 
 
                     <p data-i18n="project1_text">
-
                         Machining and fixture design work related
                         to a vane pump component.
-
                     </p>
 
 
@@ -1067,8 +1093,9 @@
 
                 <div class="project-image">
 
-                    <img src="assets/projects/project-2.jpg"
+                    <img src="./assets/projects/project-2.jpg"
                          alt="Manufacturing Operations"
+                         loading="lazy"
                          onerror="this.parentElement.classList.add('no-image');">
 
                     <div class="project-image-fallback">
@@ -1082,24 +1109,18 @@
 
                     <span class="project-category"
                           data-i18n="project2_category">
-
                         MANUFACTURING
-
                     </span>
 
 
                     <h3 data-i18n="project2_title">
-
                         Building Material Production
-
                     </h3>
 
 
                     <p data-i18n="project2_text">
-
                         Production coordination, reporting,
                         packaging, inventory and operational follow-up.
-
                     </p>
 
 
@@ -1123,8 +1144,9 @@
 
                 <div class="project-image">
 
-                    <img src="assets/projects/project-3.jpg"
+                    <img src="./assets/projects/project-3.jpg"
                          alt="Business Development"
+                         loading="lazy"
                          onerror="this.parentElement.classList.add('no-image');">
 
                     <div class="project-image-fallback">
@@ -1138,24 +1160,18 @@
 
                     <span class="project-category"
                           data-i18n="project3_category">
-
                         BUSINESS
-
                     </span>
 
 
                     <h3 data-i18n="project3_title">
-
                         Business Development
-
                     </h3>
 
 
                     <p data-i18n="project3_text">
-
                         Client discovery, lead development,
                         quotations, sales coordination and follow-up.
-
                     </p>
 
 
@@ -1179,8 +1195,9 @@
 
                 <div class="project-image">
 
-                    <img src="assets/projects/project-4.jpg"
+                    <img src="./assets/projects/project-4.jpg"
                          alt="Web Development"
+                         loading="lazy"
                          onerror="this.parentElement.classList.add('no-image');">
 
                     <div class="project-image-fallback">
@@ -1203,10 +1220,8 @@
 
 
                     <p data-i18n="project4_text">
-
                         Personal and business website development,
                         digital content and online presence.
-
                     </p>
 
 
@@ -1234,7 +1249,8 @@
      CONTACT
 ===================================================== -->
 
-<section class="section contact-section" id="contact">
+<section class="section contact-section"
+         id="contact">
 
     <div class="container">
 
@@ -1242,15 +1258,11 @@
 
             <p class="section-label"
                data-i18n="contact_label">
-
                 CONTACT
-
             </p>
 
             <h2 data-i18n="contact_title">
-
                 Let's Work Together
-
             </h2>
 
 
@@ -1425,12 +1437,11 @@
 
                 </a>
 
-
             </div>
 
 
 
-            <!-- MESSAGE FORM -->
+            <!-- CONTACT FORM -->
 
             <div class="contact-form-wrapper">
 
@@ -1451,13 +1462,15 @@
 
                         <div class="form-group">
 
-                            <label data-i18n="form_name">
+                            <label for="name"
+                                   data-i18n="form_name">
                                 Your Name
                             </label>
 
                             <input type="text"
                                    id="name"
                                    required
+                                   autocomplete="name"
                                    placeholder="Your Name">
 
                         </div>
@@ -1465,13 +1478,15 @@
 
                         <div class="form-group">
 
-                            <label data-i18n="form_email">
+                            <label for="email"
+                                   data-i18n="form_email">
                                 Your Email
                             </label>
 
                             <input type="email"
                                    id="email"
                                    required
+                                   autocomplete="email"
                                    placeholder="Your Email">
 
                         </div>
@@ -1481,7 +1496,8 @@
 
                     <div class="form-group">
 
-                        <label data-i18n="form_subject">
+                        <label for="subject"
+                               data-i18n="form_subject">
                             Subject
                         </label>
 
@@ -1495,7 +1511,8 @@
 
                     <div class="form-group">
 
-                        <label data-i18n="form_message">
+                        <label for="message"
+                               data-i18n="form_message">
                             Message
                         </label>
 
@@ -1597,15 +1614,14 @@
 
         <div>
 
-            <a href="#home" class="logo">
+            <a href="#home"
+               class="logo">
                 Jebon<span>.</span>
             </a>
 
             <p data-i18n="footer_text">
-
                 Mechanical Engineer • Business Professional •
                 Chinese Communication
-
             </p>
 
         </div>
@@ -1615,6 +1631,7 @@
            class="footer-email">
 
             <i class="fas fa-envelope"></i>
+
             jibontalk2020@gmail.com
 
         </a>
@@ -1625,11 +1642,14 @@
     <div class="copyright">
 
         <p>
+
             © <span id="year"></span>
             Jebon Kumar Sarker.
+
             <span data-i18n="rights">
                 All Rights Reserved.
             </span>
+
         </p>
 
     </div>
@@ -1644,6 +1664,7 @@
 
 <button class="back-to-top"
         id="backToTop"
+        type="button"
         aria-label="Back to top">
 
     <i class="fas fa-arrow-up"></i>
@@ -1664,6 +1685,10 @@
 
 const translations = {
 
+    /* =================================================
+       ENGLISH
+    ================================================= */
+
     en: {
 
         nav_home: "Home",
@@ -1674,295 +1699,299 @@ const translations = {
         nav_contact: "Contact",
 
         hero_eyebrow:
-        "MECHANICAL ENGINEER • BUSINESS • COMMUNICATION",
+            "MECHANICAL ENGINEER • BUSINESS • COMMUNICATION",
 
         hero_first_name:
-        "Jebon Kumar",
+            "Jebon Kumar",
 
         hero_last_name:
-        "Sarker",
+            "Sarker",
 
         hero_title:
-        "Mechanical Engineer & Business Operations Professional",
+            "Mechanical Engineer & Business Operations Professional",
 
         hero_description:
-        "Mechanical Engineering graduate with professional experience in Chinese-Bangla-English communication, business development, sales, manufacturing operations, administration and management coordination.",
+            "Mechanical Engineering graduate with professional experience in Chinese-Bangla-English communication, business development, sales, manufacturing operations, administration and management coordination.",
 
         contact_me:
-        "Contact Me",
+            "Contact Me",
 
         view_experience:
-        "View Experience",
+            "View Experience",
 
         professional_experience:
-        "Professional Experience",
+            "Professional Experience",
 
         multilingual:
-        "Multilingual Communication",
+            "Multilingual Communication",
 
         about_label:
-        "ABOUT ME",
+            "ABOUT ME",
 
         about_title:
-        "Engineering knowledge meets business execution.",
+            "Engineering knowledge meets business execution.",
 
         about_intro:
-        "I combine technical engineering knowledge with communication, business development and operational experience.",
+            "I combine technical engineering knowledge with communication, business development and operational experience.",
 
         about_p1:
-        "I am a Mechanical Engineering graduate from Changsha University of Science & Technology, China, with professional experience in multinational business environments in Bangladesh.",
+            "I am a Mechanical Engineering graduate from Changsha University of Science & Technology, China, with professional experience in multinational business environments in Bangladesh.",
 
         about_p2:
-        "My professional work combines mechanical engineering knowledge, Chinese-Bangla-English communication, business development, sales coordination, manufacturing operations and management support.",
+            "My professional work combines mechanical engineering knowledge, Chinese-Bangla-English communication, business development, sales coordination, manufacturing operations and management support.",
 
         about_p3:
-        "I work closely with management, production teams, sales representatives, suppliers and clients, helping coordinate communication and business operations between Chinese management and local teams.",
+            "I work closely with management, production teams, sales representatives, suppliers and clients, helping coordinate communication and business operations between Chinese management and local teams.",
 
         highlight_engineering:
-        "Engineering",
+            "Engineering",
 
         highlight_engineering_text:
-        "Mechanical Design & Manufacturing",
+            "Mechanical Design & Manufacturing",
 
         highlight_language:
-        "Communication",
+            "Communication",
 
         highlight_language_text:
-        "Chinese • Bangla • English",
+            "Chinese • Bangla • English",
 
         highlight_business:
-        "Business",
+            "Business",
 
         highlight_business_text:
-        "Sales & Business Development",
+            "Sales & Business Development",
 
         highlight_operations:
-        "Operations",
+            "Operations",
 
         highlight_operations_text:
-        "Manufacturing & Management Support",
+            "Manufacturing & Management Support",
 
         about_card_title:
-        "Professional Focus",
+            "Professional Focus",
 
         focus_1:
-        "Mechanical Engineering",
+            "Mechanical Engineering",
 
         focus_2:
-        "Manufacturing & Production",
+            "Manufacturing & Production",
 
         focus_3:
-        "Chinese Business Communication",
+            "Chinese Business Communication",
 
         focus_4:
-        "Business Development",
+            "Business Development",
 
         focus_5:
-        "Sales & Client Management",
+            "Sales & Client Management",
 
         focus_6:
-        "Administration & Operations",
+            "Administration & Operations",
 
         focus_7:
-        "Web & Digital Projects",
+            "Web & Digital Projects",
 
         experience_label:
-        "EXPERIENCE",
+            "EXPERIENCE",
 
         experience_title:
-        "Professional Journey",
+            "Professional Journey",
 
         experience_intro:
-        "Experience across engineering, manufacturing, business development, communication and management.",
+            "Experience across engineering, manufacturing, business development, communication and management.",
 
         exp1_date:
-        "2026 — Present",
+            "2026 — Present",
 
         exp1_title:
-        "Assistant to Managing Director",
+            "Assistant to Managing Director",
 
         exp1_description:
-        "Supporting Chinese management in communication, production coordination, business development, supplier communication, client management, administration and daily business operations.",
+            "Supporting Chinese management in communication, production coordination, business development, supplier communication, client management, administration and daily business operations.",
 
         tag_management:
-        "Management Support",
+            "Management Support",
 
         tag_translation:
-        "Interpretation",
+            "Interpretation",
 
         tag_sales:
-        "Sales",
+            "Sales",
 
         tag_production:
-        "Production",
+            "Production",
 
         exp2_title:
-        "Interpreter / HR & Administration / Marketing",
+            "Interpreter / HR & Administration / Marketing",
 
         exp2_description:
-        "Worked across interpretation, employee communication, administration, HR support and marketing activities in a Chinese-Bangladeshi business environment.",
+            "Worked across interpretation, employee communication, administration, HR support and marketing activities in a Chinese-Bangladeshi business environment.",
 
         exp3_title:
-        "Industrial Automation Internship",
+            "Industrial Automation Internship",
 
         exp3_description:
-        "Practical exposure to PLC concepts, FluidSIM simulation, motor control logic and industrial automation systems.",
+            "Practical exposure to PLC concepts, FluidSIM simulation, motor control logic and industrial automation systems.",
 
         exp4_title:
-        "Mechanical Engineering",
+            "Mechanical Engineering",
 
         exp4_description:
-        "Studied mechanical engineering with practical exposure to mechanical design, manufacturing, automation and engineering systems.",
+            "Studied mechanical engineering with practical exposure to mechanical design, manufacturing, automation and engineering systems.",
 
         skills_label:
-        "SKILLS",
+            "SKILLS",
 
         skills_title:
-        "Professional Capabilities",
+            "Professional Capabilities",
 
         skill1_title:
-        "Mechanical Engineering",
+            "Mechanical Engineering",
 
         skill1_text:
-        "Mechanical design, manufacturing, automation and engineering fundamentals.",
+            "Mechanical design, manufacturing, automation and engineering fundamentals.",
 
         skill2_title:
-        "Chinese Communication",
+            "Chinese Communication",
 
         skill2_text:
-        "Chinese-Bangla-English interpretation, business communication and coordination.",
+            "Chinese-Bangla-English interpretation, business communication and coordination.",
 
         skill3_title:
-        "Business Development",
+            "Business Development",
 
         skill3_text:
-        "Lead generation, client communication, sales follow-up and business relationships.",
+            "Lead generation, client communication, sales follow-up and business relationships.",
 
         skill4_title:
-        "Manufacturing Operations",
+            "Manufacturing Operations",
 
         skill4_text:
-        "Production reporting, factory coordination, inventory and operational follow-up.",
+            "Production reporting, factory coordination, inventory and operational follow-up.",
 
         skill5_title:
-        "Management Support",
+            "Management Support",
 
         skill5_text:
-        "Documentation, reporting, coordination, communication and administrative support.",
+            "Documentation, reporting, coordination, communication and administrative support.",
 
         skill6_title:
-        "Web & Digital",
+            "Web & Digital",
 
         skill6_text:
-        "HTML, CSS, JavaScript, websites, digital content and online business presence.",
+            "HTML, CSS, JavaScript, websites, digital content and online business presence.",
 
         projects_label:
-        "PROJECTS",
+            "PROJECTS",
 
         projects_title:
-        "Selected Professional Work",
+            "Selected Professional Work",
 
         projects_intro:
-        "A selection of engineering, manufacturing, business and digital work.",
+            "A selection of engineering, manufacturing, business and digital work.",
 
         project1_category:
-        "ENGINEERING",
+            "ENGINEERING",
 
         project1_title:
-        "Mechanical Engineering Thesis",
+            "Mechanical Engineering Thesis",
 
         project1_text:
-        "Machining and fixture design work related to a vane pump component.",
+            "Machining and fixture design work related to a vane pump component.",
 
         project2_category:
-        "MANUFACTURING",
+            "MANUFACTURING",
 
         project2_title:
-        "Building Material Production",
+            "Building Material Production",
 
         project2_text:
-        "Production coordination, reporting, packaging, inventory and operational follow-up.",
+            "Production coordination, reporting, packaging, inventory and operational follow-up.",
 
         project3_category:
-        "BUSINESS",
+            "BUSINESS",
 
         project3_title:
-        "Business Development",
+            "Business Development",
 
         project3_text:
-        "Client discovery, lead development, quotations, sales coordination and follow-up.",
+            "Client discovery, lead development, quotations, sales coordination and follow-up.",
 
         project4_title:
-        "Website Development",
+            "Website Development",
 
         project4_text:
-        "Personal and business website development, digital content and online presence.",
+            "Personal and business website development, digital content and online presence.",
 
         project_details:
-        "Discuss Project",
+            "Discuss Project",
 
         contact_label:
-        "CONTACT",
+            "CONTACT",
 
         contact_title:
-        "Let's Work Together",
+            "Let's Work Together",
 
         contact_intro:
-        "For professional opportunities, business collaboration, engineering projects or international communication, feel free to contact me.",
+            "For professional opportunities, business collaboration, engineering projects or international communication, feel free to contact me.",
 
         email_label:
-        "Email",
+            "Email",
 
         phone_label:
-        "Phone",
+            "Phone",
 
         whatsapp_label:
-        "WhatsApp",
+            "WhatsApp",
 
         permanent_label:
-        "Permanent Address",
+            "Permanent Address",
 
         permanent_address:
-        "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
+            "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
 
         present_label:
-        "Present Address",
+            "Present Address",
 
         present_address:
-        "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
+            "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
 
         message_title:
-        "Send Me a Message",
+            "Send Me a Message",
 
         message_intro:
-        "Your message will be prepared and sent to my email.",
+            "Your message will be prepared and sent to my email.",
 
         form_name:
-        "Your Name",
+            "Your Name",
 
         form_email:
-        "Your Email",
+            "Your Email",
 
         form_subject:
-        "Subject",
+            "Subject",
 
         form_message:
-        "Message",
+            "Message",
 
         send_message:
-        "Send Message",
+            "Send Message",
 
         follow_me:
-        "Connect with me",
+            "Connect with me",
 
         footer_text:
-        "Mechanical Engineer • Business Professional • Chinese Communication",
+            "Mechanical Engineer • Business Professional • Chinese Communication",
 
         rights:
-        "All Rights Reserved."
+            "All Rights Reserved."
 
     },
 
+
+    /* =================================================
+       CHINESE
+    ================================================= */
 
     zh: {
 
@@ -1974,295 +2003,299 @@ const translations = {
         nav_contact: "联系我",
 
         hero_eyebrow:
-        "机械工程师 • 商务 • 跨语言沟通",
+            "机械工程师 • 商务 • 跨语言沟通",
 
         hero_first_name:
-        "杰本·库马尔",
+            "杰本·库马尔",
 
         hero_last_name:
-        "萨克",
+            "萨克",
 
         hero_title:
-        "机械工程师与商务运营专业人士",
+            "机械工程师与商务运营专业人士",
 
         hero_description:
-        "机械工程专业毕业生，拥有中文、孟加拉语和英语沟通，以及商务开发、销售、生产运营、行政管理和管理协调方面的专业经验。",
+            "机械工程专业毕业生，拥有中文、孟加拉语和英语沟通，以及商务开发、销售、生产运营、行政管理和管理协调方面的专业经验。",
 
         contact_me:
-        "联系我",
+            "联系我",
 
         view_experience:
-        "查看经历",
+            "查看经历",
 
         professional_experience:
-        "专业工作经验",
+            "专业工作经验",
 
         multilingual:
-        "多语言沟通",
+            "多语言沟通",
 
         about_label:
-        "关于我",
+            "关于我",
 
         about_title:
-        "将工程知识与商务执行相结合。",
+            "将工程知识与商务执行相结合。",
 
         about_intro:
-        "我将工程技术知识、沟通能力、商务开发和运营经验结合在实际工作中。",
+            "我将工程技术知识、沟通能力、商务开发和运营经验结合在实际工作中。",
 
         about_p1:
-        "我毕业于中国长沙理工大学机械工程专业，并在孟加拉国的中孟跨国商业环境中拥有专业工作经验。",
+            "我毕业于中国长沙理工大学机械工程专业，并在孟加拉国的中孟跨国商业环境中拥有专业工作经验。",
 
         about_p2:
-        "我的工作涉及机械工程知识、中孟英三语沟通、商务开发、销售协调、生产运营以及管理支持。",
+            "我的工作涉及机械工程知识、中孟英三语沟通、商务开发、销售协调、生产运营以及管理支持。",
 
         about_p3:
-        "我与公司管理层、生产团队、销售人员、供应商和客户密切合作，协助中国管理层与孟加拉本地团队之间的沟通及业务运营。",
+            "我与公司管理层、生产团队、销售人员、供应商和客户密切合作，协助中国管理层与孟加拉本地团队之间的沟通及业务运营。",
 
         highlight_engineering:
-        "工程",
+            "工程",
 
         highlight_engineering_text:
-        "机械设计与制造",
+            "机械设计与制造",
 
         highlight_language:
-        "沟通",
+            "沟通",
 
         highlight_language_text:
-        "中文 • 孟加拉语 • 英语",
+            "中文 • 孟加拉语 • 英语",
 
         highlight_business:
-        "商务",
+            "商务",
 
         highlight_business_text:
-        "销售与商务开发",
+            "销售与商务开发",
 
         highlight_operations:
-        "运营",
+            "运营",
 
         highlight_operations_text:
-        "生产与管理支持",
+            "生产与管理支持",
 
         about_card_title:
-        "专业方向",
+            "专业方向",
 
         focus_1:
-        "机械工程",
+            "机械工程",
 
         focus_2:
-        "制造与生产",
+            "制造与生产",
 
         focus_3:
-        "中文商务沟通",
+            "中文商务沟通",
 
         focus_4:
-        "商务开发",
+            "商务开发",
 
         focus_5:
-        "销售与客户管理",
+            "销售与客户管理",
 
         focus_6:
-        "行政与运营",
+            "行政与运营",
 
         focus_7:
-        "网站与数字项目",
+            "网站与数字项目",
 
         experience_label:
-        "工作经历",
+            "工作经历",
 
         experience_title:
-        "职业经历",
+            "职业经历",
 
         experience_intro:
-        "涵盖工程、制造、商务开发、沟通和管理支持方面的工作经验。",
+            "涵盖工程、制造、商务开发、沟通和管理支持方面的工作经验。",
 
         exp1_date:
-        "2026年至今",
+            "2026年至今",
 
         exp1_title:
-        "总经理助理",
+            "总经理助理",
 
         exp1_description:
-        "协助中国管理层进行沟通、生产协调、商务开发、供应商沟通、客户管理、行政工作及日常业务运营。",
+            "协助中国管理层进行沟通、生产协调、商务开发、供应商沟通、客户管理、行政工作及日常业务运营。",
 
         tag_management:
-        "管理支持",
+            "管理支持",
 
         tag_translation:
-        "翻译",
+            "翻译",
 
         tag_sales:
-        "销售",
+            "销售",
 
         tag_production:
-        "生产",
+            "生产",
 
         exp2_title:
-        "翻译 / 人事行政 / 市场",
+            "翻译 / 人事行政 / 市场",
 
         exp2_description:
-        "负责翻译、员工沟通、行政、人事支持和市场推广等工作，服务于中孟商业环境。",
+            "负责翻译、员工沟通、行政、人事支持和市场推广等工作，服务于中孟商业环境。",
 
         exp3_title:
-        "工业自动化实习",
+            "工业自动化实习",
 
         exp3_description:
-        "接触PLC、FluidSIM仿真、电机控制逻辑和工业自动化系统。",
+            "接触PLC、FluidSIM仿真、电机控制逻辑和工业自动化系统。",
 
         exp4_title:
-        "机械工程",
+            "机械工程",
 
         exp4_description:
-        "学习机械工程，并获得机械设计、制造、自动化和工程系统方面的实践知识。",
+            "学习机械工程，并获得机械设计、制造、自动化和工程系统方面的实践知识。",
 
         skills_label:
-        "技能",
+            "技能",
 
         skills_title:
-        "专业能力",
+            "专业能力",
 
         skill1_title:
-        "机械工程",
+            "机械工程",
 
         skill1_text:
-        "机械设计、制造、自动化及工程基础。",
+            "机械设计、制造、自动化及工程基础。",
 
         skill2_title:
-        "中文沟通",
+            "中文沟通",
 
         skill2_text:
-        "中文、孟加拉语和英语翻译、商务沟通及协调。",
+            "中文、孟加拉语和英语翻译、商务沟通及协调。",
 
         skill3_title:
-        "商务开发",
+            "商务开发",
 
         skill3_text:
-        "客户开发、客户沟通、销售跟进和商务关系维护。",
+            "客户开发、客户沟通、销售跟进和商务关系维护。",
 
         skill4_title:
-        "生产运营",
+            "生产运营",
 
         skill4_text:
-        "生产报告、工厂协调、库存及运营跟进。",
+            "生产报告、工厂协调、库存及运营跟进。",
 
         skill5_title:
-        "管理支持",
+            "管理支持",
 
         skill5_text:
-        "文件、报告、协调、沟通和行政支持。",
+            "文件、报告、协调、沟通和行政支持。",
 
         skill6_title:
-        "网站与数字技术",
+            "网站与数字技术",
 
         skill6_text:
-        "HTML、CSS、JavaScript、网站开发、数字内容和线上业务展示。",
+            "HTML、CSS、JavaScript、网站开发、数字内容和线上业务展示。",
 
         projects_label:
-        "项目",
+            "项目",
 
         projects_title:
-        "专业项目",
+            "专业项目",
 
         projects_intro:
-        "工程、制造、商务和数字领域的部分项目。",
+            "工程、制造、商务和数字领域的部分项目。",
 
         project1_category:
-        "工程",
+            "工程",
 
         project1_title:
-        "机械工程毕业设计",
+            "机械工程毕业设计",
 
         project1_text:
-        "与叶片泵零件相关的加工及夹具设计工作。",
+            "与叶片泵零件相关的加工及夹具设计工作。",
 
         project2_category:
-        "制造",
+            "制造",
 
         project2_title:
-        "建筑材料生产",
+            "建筑材料生产",
 
         project2_text:
-        "生产协调、生产报告、包装、库存和运营跟进。",
+            "生产协调、生产报告、包装、库存和运营跟进。",
 
         project3_category:
-        "商务",
+            "商务",
 
         project3_title:
-        "商务开发",
+            "商务开发",
 
         project3_text:
-        "客户开发、项目线索、报价、销售协调和客户跟进。",
+            "客户开发、项目线索、报价、销售协调和客户跟进。",
 
         project4_title:
-        "网站开发",
+            "网站开发",
 
         project4_text:
-        "个人及企业网站开发、数字内容和线上品牌建设。",
+            "个人及企业网站开发、数字内容和线上品牌建设。",
 
         project_details:
-        "洽谈项目",
+            "洽谈项目",
 
         contact_label:
-        "联系",
+            "联系",
 
         contact_title:
-        "期待与您合作",
+            "期待与您合作",
 
         contact_intro:
-        "如有职业机会、商务合作、工程项目或国际商务沟通需求，欢迎联系我。",
+            "如有职业机会、商务合作、工程项目或国际商务沟通需求，欢迎联系我。",
 
         email_label:
-        "邮箱",
+            "邮箱",
 
         phone_label:
-        "电话",
+            "电话",
 
         whatsapp_label:
-        "WhatsApp",
+            "WhatsApp",
 
         permanent_label:
-        "永久地址",
+            "永久地址",
 
         permanent_address:
-        "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
+            "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
 
         present_label:
-        "现居地址",
+            "现居地址",
 
         present_address:
-        "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
+            "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
 
         message_title:
-        "给我留言",
+            "给我留言",
 
         message_intro:
-        "您的信息将通过电子邮件发送给我。",
+            "您的信息将通过电子邮件发送给我。",
 
         form_name:
-        "您的姓名",
+            "您的姓名",
 
         form_email:
-        "您的邮箱",
+            "您的邮箱",
 
         form_subject:
-        "主题",
+            "主题",
 
         form_message:
-        "留言",
+            "留言",
 
         send_message:
-        "发送消息",
+            "发送消息",
 
         follow_me:
-        "联系我的社交平台",
+            "联系我的社交平台",
 
         footer_text:
-        "机械工程师 • 商务专业人士 • 中文沟通",
+            "机械工程师 • 商务专业人士 • 中文沟通",
 
         rights:
-        "版权所有。"
+            "版权所有。"
 
     },
 
+
+    /* =================================================
+       BANGLA
+    ================================================= */
 
     bn: {
 
@@ -2274,292 +2307,292 @@ const translations = {
         nav_contact: "যোগাযোগ",
 
         hero_eyebrow:
-        "মেকানিক্যাল ইঞ্জিনিয়ার • ব্যবসা • যোগাযোগ",
+            "মেকানিক্যাল ইঞ্জিনিয়ার • ব্যবসা • যোগাযোগ",
 
         hero_first_name:
-        "জেবন কুমার",
+            "জেবন কুমার",
 
         hero_last_name:
-        "সরকার",
+            "সরকার",
 
         hero_title:
-        "মেকানিক্যাল ইঞ্জিনিয়ার ও বিজনেস অপারেশনস প্রফেশনাল",
+            "মেকানিক্যাল ইঞ্জিনিয়ার ও বিজনেস অপারেশনস প্রফেশনাল",
 
         hero_description:
-        "মেকানিক্যাল ইঞ্জিনিয়ারিংয়ে স্নাতক এবং চীনা-বাংলা-ইংরেজি যোগাযোগ, ব্যবসা উন্নয়ন, বিক্রয়, উৎপাদন কার্যক্রম, প্রশাসন ও ব্যবস্থাপনা সমন্বয়ে পেশাগত অভিজ্ঞতা রয়েছে।",
+            "মেকানিক্যাল ইঞ্জিনিয়ারিংয়ে স্নাতক এবং চীনা-বাংলা-ইংরেজি যোগাযোগ, ব্যবসা উন্নয়ন, বিক্রয়, উৎপাদন কার্যক্রম, প্রশাসন ও ব্যবস্থাপনা সমন্বয়ে পেশাগত অভিজ্ঞতা রয়েছে।",
 
         contact_me:
-        "যোগাযোগ করুন",
+            "যোগাযোগ করুন",
 
         view_experience:
-        "অভিজ্ঞতা দেখুন",
+            "অভিজ্ঞতা দেখুন",
 
         professional_experience:
-        "পেশাগত অভিজ্ঞতা",
+            "পেশাগত অভিজ্ঞতা",
 
         multilingual:
-        "বহুভাষিক যোগাযোগ",
+            "বহুভাষিক যোগাযোগ",
 
         about_label:
-        "আমার সম্পর্কে",
+            "আমার সম্পর্কে",
 
         about_title:
-        "ইঞ্জিনিয়ারিং জ্ঞান ও ব্যবসায়িক দক্ষতার সমন্বয়।",
+            "ইঞ্জিনিয়ারিং জ্ঞান ও ব্যবসায়িক দক্ষতার সমন্বয়।",
 
         about_intro:
-        "আমি প্রযুক্তিগত ইঞ্জিনিয়ারিং জ্ঞান, যোগাযোগ, ব্যবসা উন্নয়ন এবং অপারেশনাল অভিজ্ঞতাকে একসাথে কাজে লাগাই।",
+            "আমি প্রযুক্তিগত ইঞ্জিনিয়ারিং জ্ঞান, যোগাযোগ, ব্যবসা উন্নয়ন এবং অপারেশনাল অভিজ্ঞতাকে একসাথে কাজে লাগাই।",
 
         about_p1:
-        "আমি চীনের Changsha University of Science & Technology থেকে মেকানিক্যাল ইঞ্জিনিয়ারিংয়ে স্নাতক এবং বাংলাদেশে বহুজাতিক ব্যবসায়িক পরিবেশে পেশাগত অভিজ্ঞতা অর্জন করেছি।",
+            "আমি চীনের Changsha University of Science & Technology থেকে মেকানিক্যাল ইঞ্জিনিয়ারিংয়ে স্নাতক এবং বাংলাদেশে বহুজাতিক ব্যবসায়িক পরিবেশে পেশাগত অভিজ্ঞতা অর্জন করেছি।",
 
         about_p2:
-        "আমার পেশাগত কাজের মধ্যে মেকানিক্যাল ইঞ্জিনিয়ারিং জ্ঞান, চীনা-বাংলা-ইংরেজি যোগাযোগ, ব্যবসা উন্নয়ন, বিক্রয় সমন্বয়, উৎপাদন কার্যক্রম এবং ব্যবস্থাপনা সহায়তা রয়েছে।",
+            "আমার পেশাগত কাজের মধ্যে মেকানিক্যাল ইঞ্জিনিয়ারিং জ্ঞান, চীনা-বাংলা-ইংরেজি যোগাযোগ, ব্যবসা উন্নয়ন, বিক্রয় সমন্বয়, উৎপাদন কার্যক্রম এবং ব্যবস্থাপনা সহায়তা রয়েছে।",
 
         about_p3:
-        "আমি ব্যবস্থাপনা, উৎপাদন দল, বিক্রয় প্রতিনিধি, সরবরাহকারী ও ক্লায়েন্টদের সাথে কাজ করি এবং চীনা ব্যবস্থাপনা ও স্থানীয় দলের মধ্যে যোগাযোগ ও ব্যবসায়িক কার্যক্রম সমন্বয় করতে সহায়তা করি।",
+            "আমি ব্যবস্থাপনা, উৎপাদন দল, বিক্রয় প্রতিনিধি, সরবরাহকারী ও ক্লায়েন্টদের সাথে কাজ করি এবং চীনা ব্যবস্থাপনা ও স্থানীয় দলের মধ্যে যোগাযোগ ও ব্যবসায়িক কার্যক্রম সমন্বয় করতে সহায়তা করি।",
 
         highlight_engineering:
-        "ইঞ্জিনিয়ারিং",
+            "ইঞ্জিনিয়ারিং",
 
         highlight_engineering_text:
-        "মেকানিক্যাল ডিজাইন ও ম্যানুফ্যাকচারিং",
+            "মেকানিক্যাল ডিজাইন ও ম্যানুফ্যাকচারিং",
 
         highlight_language:
-        "যোগাযোগ",
+            "যোগাযোগ",
 
         highlight_language_text:
-        "চীনা • বাংলা • ইংরেজি",
+            "চীনা • বাংলা • ইংরেজি",
 
         highlight_business:
-        "ব্যবসা",
+            "ব্যবসা",
 
         highlight_business_text:
-        "সেলস ও বিজনেস ডেভেলপমেন্ট",
+            "সেলস ও বিজনেস ডেভেলপমেন্ট",
 
         highlight_operations:
-        "অপারেশন",
+            "অপারেশন",
 
         highlight_operations_text:
-        "উৎপাদন ও ব্যবস্থাপনা সহায়তা",
+            "উৎপাদন ও ব্যবস্থাপনা সহায়তা",
 
         about_card_title:
-        "পেশাগত ক্ষেত্র",
+            "পেশাগত ক্ষেত্র",
 
         focus_1:
-        "মেকানিক্যাল ইঞ্জিনিয়ারিং",
+            "মেকানিক্যাল ইঞ্জিনিয়ারিং",
 
         focus_2:
-        "ম্যানুফ্যাকচারিং ও প্রোডাকশন",
+            "ম্যানুফ্যাকচারিং ও প্রোডাকশন",
 
         focus_3:
-        "চীনা ব্যবসায়িক যোগাযোগ",
+            "চীনা ব্যবসায়িক যোগাযোগ",
 
         focus_4:
-        "বিজনেস ডেভেলপমেন্ট",
+            "বিজনেস ডেভেলপমেন্ট",
 
         focus_5:
-        "সেলস ও ক্লায়েন্ট ম্যানেজমেন্ট",
+            "সেলস ও ক্লায়েন্ট ম্যানেজমেন্ট",
 
         focus_6:
-        "অ্যাডমিনিস্ট্রেশন ও অপারেশন",
+            "অ্যাডমিনিস্ট্রেশন ও অপারেশন",
 
         focus_7:
-        "ওয়েব ও ডিজিটাল প্রজেক্ট",
+            "ওয়েব ও ডিজিটাল প্রজেক্ট",
 
         experience_label:
-        "অভিজ্ঞতা",
+            "অভিজ্ঞতা",
 
         experience_title:
-        "পেশাগত যাত্রা",
+            "পেশাগত যাত্রা",
 
         experience_intro:
-        "ইঞ্জিনিয়ারিং, ম্যানুফ্যাকচারিং, ব্যবসা উন্নয়ন, যোগাযোগ ও ব্যবস্থাপনার অভিজ্ঞতা।",
+            "ইঞ্জিনিয়ারিং, ম্যানুফ্যাকচারিং, ব্যবসা উন্নয়ন, যোগাযোগ ও ব্যবস্থাপনার অভিজ্ঞতা।",
 
         exp1_date:
-        "২০২৬ — বর্তমান",
+            "২০২৬ — বর্তমান",
 
         exp1_title:
-        "ব্যবস্থাপনা পরিচালকের সহকারী",
+            "ব্যবস্থাপনা পরিচালকের সহকারী",
 
         exp1_description:
-        "চীনা ব্যবস্থাপনাকে যোগাযোগ, উৎপাদন সমন্বয়, ব্যবসা উন্নয়ন, সরবরাহকারী যোগাযোগ, ক্লায়েন্ট ম্যানেজমেন্ট, প্রশাসন ও দৈনন্দিন ব্যবসায়িক কার্যক্রমে সহায়তা করা।",
+            "চীনা ব্যবস্থাপনাকে যোগাযোগ, উৎপাদন সমন্বয়, ব্যবসা উন্নয়ন, সরবরাহকারী যোগাযোগ, ক্লায়েন্ট ম্যানেজমেন্ট, প্রশাসন ও দৈনন্দিন ব্যবসায়িক কার্যক্রমে সহায়তা করা।",
 
         tag_management:
-        "ম্যানেজমেন্ট সাপোর্ট",
+            "ম্যানেজমেন্ট সাপোর্ট",
 
         tag_translation:
-        "ইন্টারপ্রিটেশন",
+            "ইন্টারপ্রিটেশন",
 
         tag_sales:
-        "সেলস",
+            "সেলস",
 
         tag_production:
-        "প্রোডাকশন",
+            "প্রোডাকশন",
 
         exp2_title:
-        "ইন্টারপ্রেটার / HR ও অ্যাডমিন / মার্কেটিং",
+            "ইন্টারপ্রেটার / HR ও অ্যাডমিন / মার্কেটিং",
 
         exp2_description:
-        "চীনা-বাংলাদেশি ব্যবসায়িক পরিবেশে অনুবাদ, কর্মী যোগাযোগ, প্রশাসন, HR সহায়তা এবং মার্কেটিং কার্যক্রমে কাজ করেছি।",
+            "চীনা-বাংলাদেশি ব্যবসায়িক পরিবেশে অনুবাদ, কর্মী যোগাযোগ, প্রশাসন, HR সহায়তা এবং মার্কেটিং কার্যক্রমে কাজ করেছি।",
 
         exp3_title:
-        "ইন্ডাস্ট্রিয়াল অটোমেশন ইন্টার্নশিপ",
+            "ইন্ডাস্ট্রিয়াল অটোমেশন ইন্টার্নশিপ",
 
         exp3_description:
-        "PLC, FluidSIM simulation, motor control logic এবং industrial automation systems সম্পর্কে ব্যবহারিক অভিজ্ঞতা অর্জন করেছি।",
+            "PLC, FluidSIM simulation, motor control logic এবং industrial automation systems সম্পর্কে ব্যবহারিক অভিজ্ঞতা অর্জন করেছি।",
 
         exp4_title:
-        "মেকানিক্যাল ইঞ্জিনিয়ারিং",
+            "মেকানিক্যাল ইঞ্জিনিয়ারিং",
 
         exp4_description:
-        "মেকানিক্যাল ডিজাইন, ম্যানুফ্যাকচারিং, অটোমেশন এবং ইঞ্জিনিয়ারিং সিস্টেমের ব্যবহারিক জ্ঞান অর্জন করেছি।",
+            "মেকানিক্যাল ডিজাইন, ম্যানুফ্যাকচারিং, অটোমেশন এবং ইঞ্জিনিয়ারিং সিস্টেমের ব্যবহারিক জ্ঞান অর্জন করেছি।",
 
         skills_label:
-        "দক্ষতা",
+            "দক্ষতা",
 
         skills_title:
-        "পেশাগত সক্ষমতা",
+            "পেশাগত সক্ষমতা",
 
         skill1_title:
-        "মেকানিক্যাল ইঞ্জিনিয়ারিং",
+            "মেকানিক্যাল ইঞ্জিনিয়ারিং",
 
         skill1_text:
-        "মেকানিক্যাল ডিজাইন, ম্যানুফ্যাকচারিং, অটোমেশন এবং ইঞ্জিনিয়ারিংয়ের মৌলিক জ্ঞান।",
+            "মেকানিক্যাল ডিজাইন, ম্যানুফ্যাকচারিং, অটোমেশন এবং ইঞ্জিনিয়ারিংয়ের মৌলিক জ্ঞান।",
 
         skill2_title:
-        "চীনা যোগাযোগ",
+            "চীনা যোগাযোগ",
 
         skill2_text:
-        "চীনা-বাংলা-ইংরেজি অনুবাদ, ব্যবসায়িক যোগাযোগ ও সমন্বয়।",
+            "চীনা-বাংলা-ইংরেজি অনুবাদ, ব্যবসায়িক যোগাযোগ ও সমন্বয়।",
 
         skill3_title:
-        "বিজনেস ডেভেলপমেন্ট",
+            "বিজনেস ডেভেলপমেন্ট",
 
         skill3_text:
-        "লিড জেনারেশন, ক্লায়েন্ট যোগাযোগ, সেলস ফলো-আপ এবং ব্যবসায়িক সম্পর্ক।",
+            "লিড জেনারেশন, ক্লায়েন্ট যোগাযোগ, সেলস ফলো-আপ এবং ব্যবসায়িক সম্পর্ক।",
 
         skill4_title:
-        "ম্যানুফ্যাকচারিং অপারেশন",
+            "ম্যানুফ্যাকচারিং অপারেশন",
 
         skill4_text:
-        "প্রোডাকশন রিপোর্টিং, ফ্যাক্টরি সমন্বয়, ইনভেন্টরি এবং অপারেশনাল ফলো-আপ।",
+            "প্রোডাকশন রিপোর্টিং, ফ্যাক্টরি সমন্বয়, ইনভেন্টরি এবং অপারেশনাল ফলো-আপ।",
 
         skill5_title:
-        "ম্যানেজমেন্ট সাপোর্ট",
+            "ম্যানেজমেন্ট সাপোর্ট",
 
         skill5_text:
-        "ডকুমেন্টেশন, রিপোর্টিং, সমন্বয়, যোগাযোগ এবং প্রশাসনিক সহায়তা।",
+            "ডকুমেন্টেশন, রিপোর্টিং, সমন্বয়, যোগাযোগ এবং প্রশাসনিক সহায়তা।",
 
         skill6_title:
-        "ওয়েব ও ডিজিটাল",
+            "ওয়েব ও ডিজিটাল",
 
         skill6_text:
-        "HTML, CSS, JavaScript, ওয়েবসাইট, ডিজিটাল কনটেন্ট এবং অনলাইন ব্যবসায়িক উপস্থিতি।",
+            "HTML, CSS, JavaScript, ওয়েবসাইট, ডিজিটাল কনটেন্ট এবং অনলাইন ব্যবসায়িক উপস্থিতি।",
 
         projects_label:
-        "প্রকল্প",
+            "প্রকল্প",
 
         projects_title:
-        "নির্বাচিত পেশাগত কাজ",
+            "নির্বাচিত পেশাগত কাজ",
 
         projects_intro:
-        "ইঞ্জিনিয়ারিং, ম্যানুফ্যাকচারিং, ব্যবসা এবং ডিজিটাল কাজের কিছু উদাহরণ।",
+            "ইঞ্জিনিয়ারিং, ম্যানুফ্যাকচারিং, ব্যবসা এবং ডিজিটাল কাজের কিছু উদাহরণ।",
 
         project1_category:
-        "ইঞ্জিনিয়ারিং",
+            "ইঞ্জিনিয়ারিং",
 
         project1_title:
-        "মেকানিক্যাল ইঞ্জিনিয়ারিং থিসিস",
+            "মেকানিক্যাল ইঞ্জিনিয়ারিং থিসিস",
 
         project1_text:
-        "ভেন পাম্পের একটি কম্পোনেন্টের machining ও fixture design সম্পর্কিত কাজ।",
+            "ভেন পাম্পের একটি কম্পোনেন্টের machining ও fixture design সম্পর্কিত কাজ।",
 
         project2_category:
-        "ম্যানুফ্যাকচারিং",
+            "ম্যানুফ্যাকচারিং",
 
         project2_title:
-        "বিল্ডিং ম্যাটেরিয়াল প্রোডাকশন",
+            "বিল্ডিং ম্যাটেরিয়াল প্রোডাকশন",
 
         project2_text:
-        "প্রোডাকশন সমন্বয়, রিপোর্টিং, প্যাকেজিং, ইনভেন্টরি ও অপারেশনাল ফলো-আপ।",
+            "প্রোডাকশন সমন্বয়, রিপোর্টিং, প্যাকেজিং, ইনভেন্টরি ও অপারেশনাল ফলো-আপ।",
 
         project3_category:
-        "ব্যবসা",
+            "ব্যবসা",
 
         project3_title:
-        "বিজনেস ডেভেলপমেন্ট",
+            "বিজনেস ডেভেলপমেন্ট",
 
         project3_text:
-        "ক্লায়েন্ট অনুসন্ধান, লিড ডেভেলপমেন্ট, কোটেশন, সেলস সমন্বয় ও ফলো-আপ।",
+            "ক্লায়েন্ট অনুসন্ধান, লিড ডেভেলপমেন্ট, কোটেশন, সেলস সমন্বয় ও ফলো-আপ।",
 
         project4_title:
-        "ওয়েবসাইট ডেভেলপমেন্ট",
+            "ওয়েবসাইট ডেভেলপমেন্ট",
 
         project4_text:
-        "ব্যক্তিগত ও ব্যবসায়িক ওয়েবসাইট, ডিজিটাল কনটেন্ট এবং অনলাইন উপস্থিতি তৈরি।",
+            "ব্যক্তিগত ও ব্যবসায়িক ওয়েবসাইট, ডিজিটাল কনটেন্ট এবং অনলাইন উপস্থিতি তৈরি।",
 
         project_details:
-        "প্রকল্প নিয়ে আলোচনা করুন",
+            "প্রকল্প নিয়ে আলোচনা করুন",
 
         contact_label:
-        "যোগাযোগ",
+            "যোগাযোগ",
 
         contact_title:
-        "চলুন একসাথে কাজ করি",
+            "চলুন একসাথে কাজ করি",
 
         contact_intro:
-        "পেশাগত সুযোগ, ব্যবসায়িক সহযোগিতা, ইঞ্জিনিয়ারিং প্রকল্প অথবা আন্তর্জাতিক যোগাযোগের জন্য আমার সাথে যোগাযোগ করতে পারেন।",
+            "পেশাগত সুযোগ, ব্যবসায়িক সহযোগিতা, ইঞ্জিনিয়ারিং প্রকল্প অথবা আন্তর্জাতিক যোগাযোগের জন্য আমার সাথে যোগাযোগ করতে পারেন।",
 
         email_label:
-        "ইমেইল",
+            "ইমেইল",
 
         phone_label:
-        "ফোন",
+            "ফোন",
 
         whatsapp_label:
-        "হোয়াটসঅ্যাপ",
+            "হোয়াটসঅ্যাপ",
 
         permanent_label:
-        "স্থায়ী ঠিকানা",
+            "স্থায়ী ঠিকানা",
 
         permanent_address:
-        "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
+            "Paul Para, Sardiar, Shankhari Para, Ataikula, Pabna - 6600",
 
         present_label:
-        "বর্তমান ঠিকানা",
+            "বর্তমান ঠিকানা",
 
         present_address:
-        "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
+            "Bara Rangamatia, Durgapur, Ashulia, Savar, Dhaka – 1341",
 
         message_title:
-        "আমাকে একটি মেসেজ পাঠান",
+            "আমাকে একটি মেসেজ পাঠান",
 
         message_intro:
-        "আপনার মেসেজ আমার ইমেইলে পাঠানোর জন্য প্রস্তুত হবে।",
+            "আপনার মেসেজ আমার ইমেইলে পাঠানোর জন্য প্রস্তুত হবে।",
 
         form_name:
-        "আপনার নাম",
+            "আপনার নাম",
 
         form_email:
-        "আপনার ইমেইল",
+            "আপনার ইমেইল",
 
         form_subject:
-        "বিষয়",
+            "বিষয়",
 
         form_message:
-        "মেসেজ",
+            "মেসেজ",
 
         send_message:
-        "মেসেজ পাঠান",
+            "মেসেজ পাঠান",
 
         follow_me:
-        "আমার সাথে যুক্ত থাকুন",
+            "আমার সাথে যুক্ত থাকুন",
 
         footer_text:
-        "মেকানিক্যাল ইঞ্জিনিয়ার • বিজনেস প্রফেশনাল • চীনা যোগাযোগ",
+            "মেকানিক্যাল ইঞ্জিনিয়ার • বিজনেস প্রফেশনাল • চীনা যোগাযোগ",
 
         rights:
-        "সর্বস্বত্ব সংরক্ষিত।"
+            "সর্বস্বত্ব সংরক্ষিত।"
 
     }
 
@@ -2581,7 +2614,9 @@ const currentLanguage =
     document.getElementById("currentLanguage");
 
 
-languageBtn.addEventListener("click", function () {
+languageBtn.addEventListener("click", function (event) {
+
+    event.stopPropagation();
 
     languageMenu.classList.toggle("active");
 
@@ -2590,8 +2625,10 @@ languageBtn.addEventListener("click", function () {
 
 document.addEventListener("click", function (event) {
 
-    if (!languageBtn.contains(event.target) &&
-        !languageMenu.contains(event.target)) {
+    if (
+        !languageBtn.contains(event.target) &&
+        !languageMenu.contains(event.target)
+    ) {
 
         languageMenu.classList.remove("active");
 
@@ -2604,7 +2641,8 @@ document.querySelectorAll("[data-lang]").forEach(button => {
 
     button.addEventListener("click", function () {
 
-        const lang = this.dataset.lang;
+        const lang =
+            this.dataset.lang;
 
         changeLanguage(lang);
 
@@ -2620,7 +2658,9 @@ function changeLanguage(lang) {
     const selected =
         translations[lang];
 
-    if (!selected) return;
+    if (!selected) {
+        return;
+    }
 
 
     document.querySelectorAll("[data-i18n]").forEach(element => {
@@ -2628,7 +2668,12 @@ function changeLanguage(lang) {
         const key =
             element.dataset.i18n;
 
-        if (selected[key]) {
+        if (
+            Object.prototype.hasOwnProperty.call(
+                selected,
+                key
+            )
+        ) {
 
             element.textContent =
                 selected[key];
@@ -2638,19 +2683,25 @@ function changeLanguage(lang) {
     });
 
 
-    document.documentElement.lang = lang;
+    document.documentElement.lang =
+        lang;
 
 
     if (lang === "en") {
-        currentLanguage.textContent = "EN";
-    }
 
-    if (lang === "zh") {
-        currentLanguage.textContent = "中文";
-    }
+        currentLanguage.textContent =
+            "EN";
 
-    if (lang === "bn") {
-        currentLanguage.textContent = "বাংলা";
+    } else if (lang === "zh") {
+
+        currentLanguage.textContent =
+            "中文";
+
+    } else if (lang === "bn") {
+
+        currentLanguage.textContent =
+            "বাংলা";
+
     }
 
 
@@ -2686,6 +2737,11 @@ function setTheme(theme) {
         themeToggle.innerHTML =
             '<i class="fas fa-sun"></i>';
 
+        themeToggle.setAttribute(
+            "aria-label",
+            "Switch to light mode"
+        );
+
         localStorage.setItem(
             "theme",
             "dark"
@@ -2697,6 +2753,11 @@ function setTheme(theme) {
 
         themeToggle.innerHTML =
             '<i class="fas fa-moon"></i>';
+
+        themeToggle.setAttribute(
+            "aria-label",
+            "Switch to dark mode"
+        );
 
         localStorage.setItem(
             "theme",
@@ -2836,12 +2897,15 @@ ${message}`;
 
 
     const mailto =
-        `mailto:jibontalk2020@gmail.com` +
-        `?subject=${encodeURIComponent(emailSubject)}` +
-        `&body=${encodeURIComponent(emailBody)}`;
+        "mailto:jibontalk2020@gmail.com" +
+        "?subject=" +
+        encodeURIComponent(emailSubject) +
+        "&body=" +
+        encodeURIComponent(emailBody);
 
 
-    window.location.href = mailto;
+    window.location.href =
+        mailto;
 
 });
 
@@ -2860,10 +2924,11 @@ document.getElementById("year").textContent =
    HEADER SCROLL EFFECT
 ===================================================== */
 
-window.addEventListener("scroll", function () {
+const header =
+    document.getElementById("header");
 
-    const header =
-        document.getElementById("header");
+
+window.addEventListener("scroll", function () {
 
     if (window.scrollY > 30) {
 
